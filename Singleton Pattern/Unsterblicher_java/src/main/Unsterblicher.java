@@ -7,25 +7,25 @@ public final class Unsterblicher {
 
     private Unsterblicher() {}
 
-    public static Unsterblicher getInstance() {
+    synchronized public static Unsterblicher getInstance() {
         if (instance == null)
             instance = new Unsterblicher();
         return instance;
     }
 
-    public int getGeburtsjahr() {
+    synchronized public int getGeburtsjahr() {
         return geburtsjahr;
     }
 
-    public void setGeburtsjahr(int geburtsjahr) {
+    synchronized public void setGeburtsjahr(int geburtsjahr) {
         this.geburtsjahr = geburtsjahr;
     }
 
-    public int getAnzahlLeben() {
+    synchronized public int getAnzahlLeben() {
         return anzahlLeben;
     }
 
-    public void setAnzahlLeben(int anzahlLeben) {
+    synchronized public void setAnzahlLeben(int anzahlLeben) {
         this.anzahlLeben = anzahlLeben;
     }
 }
