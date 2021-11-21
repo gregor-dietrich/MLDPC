@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Quelldateien">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Headerdateien">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Ressourcendateien">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Quelldateien\Enten">
+      <UniqueIdentifier>{9792877b-0b7d-46cb-8ff1-7a06ab320010}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\Enten">
+      <UniqueIdentifier>{0a5fc7d8-f503-48b6-bb94-b09b89b76467}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Headerdateien\Interfaces">
+      <UniqueIdentifier>{ba418d3c-485a-41c6-8349-3a5e6f45ab32}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Ente.cpp">
+      <Filter>Quelldateien</Filter>
+    </ClCompile>
+    <ClCompile Include="Entenattrappe.cpp">
+      <Filter>Quelldateien\Enten</Filter>
+    </ClCompile>
+    <ClCompile Include="Gummiente.cpp">
+      <Filter>Quelldateien\Enten</Filter>
+    </ClCompile>
+    <ClCompile Include="Mechaente.cpp">
+      <Filter>Quelldateien\Enten</Filter>
+    </ClCompile>
+    <ClCompile Include="Moorente.cpp">
+      <Filter>Quelldateien\Enten</Filter>
+    </ClCompile>
+    <ClCompile Include="Stockente.cpp">
+      <Filter>Quelldateien\Enten</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Ente.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
+    <ClInclude Include="Entenattrappe.h">
+      <Filter>Headerdateien\Enten</Filter>
+    </ClInclude>
+    <ClInclude Include="Gummiente.h">
+      <Filter>Headerdateien\Enten</Filter>
+    </ClInclude>
+    <ClInclude Include="Mechaente.h">
+      <Filter>Headerdateien\Enten</Filter>
+    </ClInclude>
+    <ClInclude Include="Moorente.h">
+      <Filter>Headerdateien\Enten</Filter>
+    </ClInclude>
+    <ClInclude Include="Stockente.h">
+      <Filter>Headerdateien\Enten</Filter>
+    </ClInclude>
+    <ClInclude Include="IFlugverhalten.h">
+      <Filter>Headerdateien\Interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IQuakverhalten.h">
+      <Filter>Headerdateien\Interfaces</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
