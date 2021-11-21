@@ -1,16 +1,14 @@
 package main;
 
 public final class Unsterblicher {
-    private static Unsterblicher instance;
+    private static final Unsterblicher INSTANCE = new Unsterblicher();
     private int geburtsjahr;
     private int anzahlLeben;
 
     private Unsterblicher() {}
 
-    synchronized public static Unsterblicher getInstance() {
-        if (instance == null)
-            instance = new Unsterblicher();
-        return instance;
+    public static Unsterblicher getInstance() {
+        return INSTANCE;
     }
 
     synchronized public int getGeburtsjahr() {
