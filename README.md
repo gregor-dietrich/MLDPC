@@ -9,4 +9,4 @@ Beispiele für Design Patterns in diversen Programmiersprachen
 | Observer Pattern | Verhaltensmuster | ❌ | ✔️ | ❌ | ❌ |
 | Factory Method | Erzeugendes Muster | ❌ | ✔️ | ❌ | ❌ |
 | Abstract Factory | Erzeugendes Muster | ❌ | ✔️ | ❌ | ❌ |
-| Singleton Pattern | Erzeugendes Muster | ❌ | ❌ | ❌ | ❌ |
+| Singleton Pattern | Erzeugendes Muster | ❌ | ✔️ | ❌ | ❌ |
