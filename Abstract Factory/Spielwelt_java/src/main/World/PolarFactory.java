@@ -9,17 +9,17 @@ import main.Flora.BrushFlora;
 
 public class PolarFactory extends AWorldFactory {
     @Override
-    protected AFauna createFauna() {
+    public AFauna createFauna() {
         return new PenguinFauna();
     }
 
     @Override
-    protected AFloor createFloor() {
+    public AFloor createFloor() {
         return new IceFloor();
     }
 
     @Override
-    protected AFlora createFlora() {
+    public AFlora createFlora() {
         return new BrushFlora();
     }
 }

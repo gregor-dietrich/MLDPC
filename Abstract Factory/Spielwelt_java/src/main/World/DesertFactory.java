@@ -9,17 +9,17 @@ import main.Flora.CactusFlora;
 
 public class DesertFactory extends AWorldFactory {
     @Override
-    protected AFauna createFauna() {
+    public AFauna createFauna() {
         return new CamelFauna();
     }
 
     @Override
-    protected AFloor createFloor() {
+    public AFloor createFloor() {
         return new SandFloor();
     }
 
     @Override
-    protected AFlora createFlora() {
+    public AFlora createFlora() {
         return new CactusFlora();
     }
 }

@@ -1,5 +1,8 @@
 package main;
 
+import main.Fauna.AFauna;
+import main.Floor.AFloor;
+import main.Flora.AFlora;
 import main.World.AWorldFactory;
 import main.World.World;
 
@@ -7,11 +10,16 @@ public class Game {
     private AWorldFactory factory;
     private World world;
 
-    public Game(World world) { this.setWorld(world); }
-
     public Game(AWorldFactory factory) {
         this.setFactory(factory);
-        this.setWorld(this.getFactory().createWorld());
+        this.createWorld();
+    }
+
+    public void createWorld() {
+        AFauna fauna = this.getFactory().createFauna();
+        AFloor floor = this.getFactory().createFloor();
+        AFlora flora = this.getFactory().createFlora();
+        this.setWorld(new World(fauna, floor, flora));
     }
 
     public void display() {
@@ -28,11 +36,15 @@ public class Game {
         return world;
     }
 
-    public void setWorld(World world) {
+    private void setWorld(World world) {
         this.world = world;
     }
 
-    public AWorldFactory getFactory() { return factory; }
+    public AWorldFactory getFactory() {
+        return factory;
+    }
 
-    public void setFactory(AWorldFactory factory) { this.factory = factory; }
+    public void setFactory(AWorldFactory factory) {
+        this.factory = factory;
+    }
 }
