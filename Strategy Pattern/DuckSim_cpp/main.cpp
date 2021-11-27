@@ -12,7 +12,7 @@
 
 int main(int argc, const char* argv[])
 {
-	// Implementierte Klassen instanzieren
+	// Implementierte Klassen instanziieren
 	std::vector<Ente*> enten =
 	{
 		new Stockente(new Quaken(), new Fluegelschlagen()),

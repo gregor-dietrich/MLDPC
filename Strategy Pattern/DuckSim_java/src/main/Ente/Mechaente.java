@@ -1,18 +1,15 @@
 package main.Ente;
 
-import main.IFlugverhalten.IFlugverhalten;
-import main.IQuakverhalten.IQuakverhalten;
+import main.Flugverhalten.IFlugverhalten;
+import main.Quakverhalten.IQuakverhalten;
 
-public class Mechaente extends Ente
-{
-    public Mechaente(IFlugverhalten fv, IQuakverhalten qv) throws Throwable
-    {
+public final class Mechaente extends AEnte {
+    public Mechaente(final IFlugverhalten fv, final IQuakverhalten qv) {
         super(fv, qv);
     }
 
     @Override
-    public void anzeigen()
-    {
+    public void anzeigen() {
         super.anzeigen();
         System.out.println("Mechaente");
     }

@@ -1,17 +1,20 @@
 package main;
 
 import main.Ente.*;
-import main.IFlugverhalten.*;
-import main.IQuakverhalten.*;
+import main.Flugverhalten.Duesenantriebsfliegen;
+import main.Flugverhalten.Fluegelschlagen;
+import main.Flugverhalten.Gleiten;
+import main.Flugverhalten.NichtFliegen;
+import main.Quakverhalten.Quaken;
+import main.Quakverhalten.Quietschen;
+import main.Quakverhalten.Still;
 
 import java.util.ArrayList;
 
-public class Main
-{
-    public static void main(String[] args) throws Throwable
-    {
-        // Implementierte Klassen instanzieren
-        ArrayList<Ente> enten = new ArrayList<>();
+public class Main {
+    public static void main(String[] args) {
+        // Implementierte Klassen instanziieren
+        final ArrayList<AEnte> enten = new ArrayList<>();
         enten.add(new Stockente(new Fluegelschlagen(), new Quaken()));
         enten.add(new Moorente(new Gleiten(), new Quaken()));
         enten.add(new Gummiente(new NichtFliegen(), new Quietschen()));

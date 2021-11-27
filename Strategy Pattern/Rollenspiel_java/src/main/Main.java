@@ -1,16 +1,17 @@
 package main;
 
-import main.IWaffenverhalten.*;
 import main.Spielfigur.*;
+import main.Waffenverhalten.Axtschlagen;
+import main.Waffenverhalten.Bogenschiessen;
+import main.Waffenverhalten.Messerstechen;
+import main.Waffenverhalten.Schwertschwingen;
 
 import java.util.ArrayList;
 
-public class Main
-{
-    public static void main(String[] args) throws Throwable
-    {
-        // Implementierte Klassen instanzieren
-        ArrayList<Spielfigur> figuren = new ArrayList<>();
+public class Main {
+    public static void main(String[] args) {
+        // Implementierte Klassen instanziieren
+        final ArrayList<ASpielfigur> figuren = new ArrayList<>();
         figuren.add(new Koenig(new Schwertschwingen()));
         figuren.add(new Koenigin(new Messerstechen()));
         figuren.add(new Ritter(new Bogenschiessen()));

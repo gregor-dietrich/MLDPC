@@ -13,7 +13,7 @@ public final class Pizza {
 
     private ADough dough;
     private ACheese cheese;
-    private ArrayList<ATopping> toppings;
+    private final ArrayList<ATopping> toppings;
 
     public Pizza(ADough dough, ACheese cheese) {
         this.setDough(dough);
@@ -100,8 +100,8 @@ public final class Pizza {
             if (topping != null)
                 if (this.toppings.add(topping))
                     System.out.println("Added: " + topping.getClassName());
-            else
-                throw new IllegalStateException("Parameter topping must not be null.");
+                else
+                    throw new IllegalStateException("Parameter topping must not be null.");
     }
 
     public void removeTopping(ATopping topping) {
@@ -109,8 +109,8 @@ public final class Pizza {
             if (topping != null)
                 if (this.toppings.remove(topping))
                     System.out.println("Removed: " + topping.getClassName());
-            else
-                throw new IllegalStateException("Parameter topping must not be null.");
+                else
+                    throw new IllegalStateException("Parameter topping must not be null.");
     }
 
     public void display() {

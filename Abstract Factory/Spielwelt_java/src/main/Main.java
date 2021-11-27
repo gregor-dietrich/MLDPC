@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        ArrayList<Game> games = new ArrayList<>();
+        final ArrayList<Game> games = new ArrayList<>();
         games.add(new Game(new DesertFactory()));
         games.add(new Game(new PolarFactory()));
         games.add(new Game(new RainforestFactory()));

@@ -9,9 +9,9 @@ import main.Lid.KombiLid;
 import main.Wing.AWing;
 import main.Wing.KombiWing;
 
-public class KombiCarFactory extends ACarFactory {
+public final class KombiCarFactory extends ACarFactory {
     @Override
-    public ADoor createDoor(carColor color) {
+    public ADoor createDoor(final carColor color) {
         var p = new KombiDoor();
         this.applyRostschutz(p);
         this.applyLackierung(p, color);
@@ -19,7 +19,7 @@ public class KombiCarFactory extends ACarFactory {
     }
 
     @Override
-    public AHood createHood(carColor color) {
+    public AHood createHood(final carColor color) {
         var p = new KombiHood();
         this.applyRostschutz(p);
         this.applyLackierung(p, color);
@@ -27,7 +27,7 @@ public class KombiCarFactory extends ACarFactory {
     }
 
     @Override
-    public ALid createLid(carColor color) {
+    public ALid createLid(final carColor color) {
         var p = new KombiLid();
         this.applyRostschutz(p);
         this.applyLackierung(p, color);
@@ -35,7 +35,7 @@ public class KombiCarFactory extends ACarFactory {
     }
 
     @Override
-    public AWing createWing(carColor color) {
+    public AWing createWing(final carColor color) {
         var p = new KombiWing();
         this.applyRostschutz(p);
         this.applyLackierung(p, color);

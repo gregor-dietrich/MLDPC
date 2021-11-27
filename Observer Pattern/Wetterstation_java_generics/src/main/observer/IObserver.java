@@ -1,5 +1,5 @@
 package main.observer;
 
 public interface IObserver<T> {
-    void update(T subject);
+    void update(final T subject);
 }

@@ -7,16 +7,12 @@ import java.util.ArrayList;
 public final class Logger {
     private final ArrayList<Message> messages;
 
-    private static class Holder {
-        private static final Logger INSTANCE = new Logger();
+    private Logger() {
+        this.messages = new ArrayList<>();
     }
 
     public static Logger getInstance() {
         return Holder.INSTANCE;
-    }
-
-    private Logger() {
-        this.messages = new ArrayList<>();
     }
 
     public void log(final String message) {
@@ -58,5 +54,9 @@ public final class Logger {
         } else
             System.out.println("ERROR: Invalid Index (out of range)");
         System.out.println();
+    }
+
+    private static class Holder {
+        private static final Logger INSTANCE = new Logger();
     }
 }

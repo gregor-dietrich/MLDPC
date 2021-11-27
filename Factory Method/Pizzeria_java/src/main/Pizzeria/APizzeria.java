@@ -4,6 +4,7 @@ import main.Pizzeria.Pizza.APizza;
 
 public abstract class APizzeria {
     private String className;
+
     protected abstract APizza createPizza(pizzaType type);
 
     public final APizza orderPizza(pizzaType type) {
@@ -13,8 +14,6 @@ public abstract class APizzeria {
         System.out.println();
         return pizza;
     }
-
-    public enum pizzaType {FUNGHI, HAWAII, MARGHERITA, SALAMI, TONNO}
 
     public String getPizzeriaName() {
         if (this.getClassName() == null) {
@@ -31,4 +30,6 @@ public abstract class APizzeria {
     private void setClassName(String className) {
         this.className = className;
     }
+
+    public enum pizzaType {FUNGHI, HAWAII, MARGHERITA, SALAMI, TONNO}
 }

@@ -1,11 +1,9 @@
 package main.Spielfigur;
 
-import main.IWaffenverhalten.IWaffenverhalten;
+import main.Waffenverhalten.IWaffenverhalten;
 
-public class Ritter extends Spielfigur
-{
-    public Ritter(IWaffenverhalten wv) throws Throwable
-    {
+public final class Ritter extends ASpielfigur {
+    public Ritter(final IWaffenverhalten wv) {
         super(wv);
     }
 }

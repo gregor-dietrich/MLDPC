@@ -1,11 +1,9 @@
 package main.Spielfigur;
 
-import main.IWaffenverhalten.IWaffenverhalten;
+import main.Waffenverhalten.AWaffenverhalten;
 
-public class Koenigin extends Spielfigur
-{
-    public Koenigin(IWaffenverhalten wv) throws Throwable
-    {
+public final class Koenigin extends ASpielfigur {
+    public Koenigin(final AWaffenverhalten wv) {
         super(wv);
     }
 }

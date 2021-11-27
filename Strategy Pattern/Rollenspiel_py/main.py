@@ -5,7 +5,7 @@ from Spielfigur.Ritter import *
 from Spielfigur.Troll import *
 
 if __name__ == "__main__":
-    # Implementierte Klassen instanzieren
+    # Implementierte Klassen instanziieren
     spielfiguren = [
         Koenig(Schwertschwingen),
         Koenigin(Messerstechen),

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        ArrayList<Pizzeria> pizzerien = new ArrayList<>();
+        final ArrayList<Pizzeria> pizzerien = new ArrayList<>();
         pizzerien.add(new Pizzeria(new ItalianIngredientFactory()));
         pizzerien.add(new Pizzeria(new AmericanIngredientFactory()));
 

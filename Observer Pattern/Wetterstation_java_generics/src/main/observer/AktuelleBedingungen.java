@@ -6,14 +6,14 @@ import main.subject.Wetterdaten;
 import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
-public class AktuelleBedingungen implements IObserver<Wetterdaten> {
-    public AktuelleBedingungen(ASubject<Wetterdaten> wd) {
+public final class AktuelleBedingungen implements IObserver<Wetterdaten> {
+    public AktuelleBedingungen(final ASubject<Wetterdaten> wd) {
         wd.addObserver(this);
     }
 
     @Override
-    public void update(Wetterdaten wd) {
-        DecimalFormat df = new DecimalFormat("#.##");
+    public void update(final Wetterdaten wd) {
+        final DecimalFormat df = new DecimalFormat("#.##");
         df.setRoundingMode(RoundingMode.DOWN);
 
         System.out.println("Aktuelle Bedingungen:");

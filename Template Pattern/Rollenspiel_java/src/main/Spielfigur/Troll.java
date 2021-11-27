@@ -1,11 +1,9 @@
 package main.Spielfigur;
 
-import main.IWaffenverhalten.IWaffenverhalten;
+import main.Waffenverhalten.AWaffenverhalten;
 
-public class Troll extends Spielfigur
-{
-    public Troll(IWaffenverhalten wv) throws Throwable
-    {
+public final class Troll extends ASpielfigur {
+    public Troll(final AWaffenverhalten wv) {
         super(wv);
     }
 }

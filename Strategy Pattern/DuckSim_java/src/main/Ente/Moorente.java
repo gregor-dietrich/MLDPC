@@ -1,18 +1,15 @@
 package main.Ente;
 
-import main.IFlugverhalten.IFlugverhalten;
-import main.IQuakverhalten.IQuakverhalten;
+import main.Flugverhalten.IFlugverhalten;
+import main.Quakverhalten.IQuakverhalten;
 
-public class Moorente extends Ente
-{
-    public Moorente(IFlugverhalten fv, IQuakverhalten qv) throws Throwable
-    {
+public final class Moorente extends AEnte {
+    public Moorente(final IFlugverhalten fv, final IQuakverhalten qv) {
         super(fv, qv);
     }
 
     @Override
-    public void anzeigen()
-    {
+    public void anzeigen() {
         super.anzeigen();
         System.out.println("Moorente");
     }

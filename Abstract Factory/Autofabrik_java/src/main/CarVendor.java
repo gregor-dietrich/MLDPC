@@ -7,18 +7,16 @@ import main.CarFactory.LimoCarFactory;
 
 import java.util.ArrayList;
 
-public class CarVendor {
+public final class CarVendor {
     private final ArrayList<Car> cars = new ArrayList<>();
     private final ArrayList<ACarFactory> factories = new ArrayList<>();
-
-    public enum carType { KOMBI, LIMO }
 
     public CarVendor() {
         this.factories.add(new KombiCarFactory());
         this.factories.add(new LimoCarFactory());
     }
 
-    public void orderCar(final carType t, ACarFactory.carColor color) {
+    public void orderCar(final carType t, final ACarFactory.carColor color) {
         System.out.println("Car has been ordered...");
         var door = factories.get(t.ordinal()).createDoor(color);
         var hood = factories.get(t.ordinal()).createHood(color);
@@ -45,4 +43,6 @@ public class CarVendor {
             car.display();
         }
     }
+
+    public enum carType {KOMBI, LIMO}
 }

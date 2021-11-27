@@ -1,6 +1,6 @@
 package main.subject;
 
-public class Wetterdaten extends ASubject<Wetterdaten> {
+public final class Wetterdaten extends ASubject<Wetterdaten> {
     private double temperatur;
     private double feuchtigkeit;
     private double luftdruck;
@@ -11,7 +11,7 @@ public class Wetterdaten extends ASubject<Wetterdaten> {
         this.luftdruck = 0;
     }
 
-    public Wetterdaten(double temperatur, double feuchtigkeit, double luftdruck) {
+    public Wetterdaten(final double temperatur, final double feuchtigkeit, final double luftdruck) {
         this.temperatur = temperatur;
         this.feuchtigkeit = feuchtigkeit;
         this.luftdruck = luftdruck;
@@ -26,7 +26,7 @@ public class Wetterdaten extends ASubject<Wetterdaten> {
         return temperatur;
     }
 
-    public void setTemperatur(double temperatur) {
+    public void setTemperatur(final double temperatur) {
         this.temperatur = temperatur;
         this.notifyObservers();
     }
@@ -35,7 +35,7 @@ public class Wetterdaten extends ASubject<Wetterdaten> {
         return feuchtigkeit;
     }
 
-    public void setFeuchtigkeit(double feuchtigkeit) {
+    public void setFeuchtigkeit(final double feuchtigkeit) {
         this.feuchtigkeit = feuchtigkeit;
         this.notifyObservers();
     }
@@ -44,7 +44,7 @@ public class Wetterdaten extends ASubject<Wetterdaten> {
         return luftdruck;
     }
 
-    public void setLuftdruck(double luftdruck) {
+    public void setLuftdruck(final double luftdruck) {
         this.luftdruck = luftdruck;
         this.notifyObservers();
     }

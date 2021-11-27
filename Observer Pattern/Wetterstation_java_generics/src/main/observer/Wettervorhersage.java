@@ -3,13 +3,13 @@ package main.observer;
 import main.subject.ASubject;
 import main.subject.Wetterdaten;
 
-public class Wettervorhersage implements IObserver<Wetterdaten> {
-    public Wettervorhersage(ASubject<Wetterdaten> wd) {
+public final class Wettervorhersage implements IObserver<Wetterdaten> {
+    public Wettervorhersage(final ASubject<Wetterdaten> wd) {
         wd.addObserver(this);
     }
 
     @Override
-    public void update(Wetterdaten wd) {
+    public void update(final Wetterdaten wd) {
         System.out.println("Die Wettervorhersage:");
         if (wd.getLuftdruck() > 1013.25)
             System.out.println("Das Wetter wird schön!");

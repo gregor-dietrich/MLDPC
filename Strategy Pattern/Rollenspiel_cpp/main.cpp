@@ -10,7 +10,7 @@
 
 int main(int argc, const char* argv[])
 {
-    // Implementierte Klassen instanzieren
+    // Implementierte Klassen instanziieren
 	std::vector<Spielfigur*> spielfiguren =
 	{
 		new Koenig(new Schwertschwingen()),

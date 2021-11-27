@@ -4,10 +4,7 @@ public final class Unsterblicher {
     private int geburtsjahr;
     private int anzahlLeben;
 
-    private Unsterblicher() {}
-
-    private static class Holder {
-        private static final Unsterblicher INSTANCE = new Unsterblicher();
+    private Unsterblicher() {
     }
 
     public static Unsterblicher getInstance() {
@@ -18,7 +15,7 @@ public final class Unsterblicher {
         return geburtsjahr;
     }
 
-    synchronized public void setGeburtsjahr(int geburtsjahr) {
+    synchronized public void setGeburtsjahr(final int geburtsjahr) {
         this.geburtsjahr = geburtsjahr;
     }
 
@@ -26,7 +23,11 @@ public final class Unsterblicher {
         return anzahlLeben;
     }
 
-    synchronized public void setAnzahlLeben(int anzahlLeben) {
+    synchronized public void setAnzahlLeben(final int anzahlLeben) {
         this.anzahlLeben = anzahlLeben;
+    }
+
+    private static class Holder {
+        private static final Unsterblicher INSTANCE = new Unsterblicher();
     }
 }

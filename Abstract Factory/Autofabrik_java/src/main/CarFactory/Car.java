@@ -5,13 +5,13 @@ import main.Hood.AHood;
 import main.Lid.ALid;
 import main.Wing.AWing;
 
-public class Car {
+public final class Car {
     private ADoor door;
     private AHood hood;
     private ALid lid;
     private AWing wing;
 
-    public Car(ADoor door, AHood hood, ALid lid, AWing wing) {
+    public Car(final ADoor door, final AHood hood, final ALid lid, final AWing wing) {
         setDoor(door);
         setHood(hood);
         setLid(lid);
@@ -30,7 +30,7 @@ public class Car {
         return door;
     }
 
-    public void setDoor(ADoor door) {
+    public void setDoor(final ADoor door) {
         this.door = door;
     }
 
@@ -38,7 +38,7 @@ public class Car {
         return hood;
     }
 
-    public void setHood(AHood hood) {
+    public void setHood(final AHood hood) {
         this.hood = hood;
     }
 
@@ -46,7 +46,7 @@ public class Car {
         return lid;
     }
 
-    public void setLid(ALid lid) {
+    public void setLid(final ALid lid) {
         this.lid = lid;
     }
 
@@ -54,7 +54,7 @@ public class Car {
         return wing;
     }
 
-    public void setWing(AWing wing) {
+    public void setWing(final AWing wing) {
         this.wing = wing;
     }
 }

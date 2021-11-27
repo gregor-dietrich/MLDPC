@@ -8,7 +8,7 @@ from IQuakverhalten import *
 
 
 if __name__ == "__main__":
-    # Implementierte Klassen instanzieren
+    # Implementierte Klassen instanziieren
     enten = [
         Stockente(Fluegelschlagen, Quaken),
         Moorente(Gleiten, Quaken),

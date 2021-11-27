@@ -22,7 +22,8 @@ public final class Pizzeria {
                 pizza.addTopping(new Ham());
                 pizza.addTopping(new Pineapple());
             }
-            case MARGHERITA -> {}
+            case MARGHERITA -> {
+            }
             case PROSCIUTTO -> pizza.addTopping(new Ham());
             case SALAMI -> pizza.addTopping(new Salami());
             case SPECIALE -> {
@@ -45,8 +46,6 @@ public final class Pizzeria {
         return pizza;
     }
 
-    public enum pizzaType {FUNGHI, HAWAII, MARGHERITA, PROSCIUTTO, SALAMI, SPECIALE, TONNO}
-
     public AIngredientFactory getIngredientFactory() {
         return ingredientFactory;
     }
@@ -57,4 +56,6 @@ public final class Pizzeria {
         else
             throw new IllegalStateException("Parameter ingredientFactory must not be null.");
     }
+
+    public enum pizzaType {FUNGHI, HAWAII, MARGHERITA, PROSCIUTTO, SALAMI, SPECIALE, TONNO}
 }

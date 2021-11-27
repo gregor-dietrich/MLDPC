@@ -4,27 +4,27 @@ public abstract class APart {
     private ACarFactory.carColor color;
     private boolean rostschutz = false;
 
-    public void applyRostschutz() {
+    public final void applyRostschutz() {
         this.setRostschutz(true);
     }
 
-    public void applyLackierung(ACarFactory.carColor color) {
+    public final void applyLackierung(ACarFactory.carColor color) {
         this.setColor(color);
     }
 
-    private void setColor(ACarFactory.carColor color) {
-        this.color = color;
-    }
-
-    public ACarFactory.carColor getColor() {
+    public final ACarFactory.carColor getColor() {
         return color;
     }
 
-    public boolean getRostschutz() {
+    private final void setColor(ACarFactory.carColor color) {
+        this.color = color;
+    }
+
+    public final boolean getRostschutz() {
         return rostschutz;
     }
 
-    public void setRostschutz(boolean rostschutz) {
+    public final void setRostschutz(boolean rostschutz) {
         this.rostschutz = rostschutz;
     }
 }
