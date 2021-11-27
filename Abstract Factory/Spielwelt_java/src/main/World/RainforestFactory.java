@@ -7,7 +7,7 @@ import main.Floor.DirtFloor;
 import main.Flora.AFlora;
 import main.Flora.TreeFlora;
 
-public class RainforestFactory extends AWorldFactory {
+public final class RainforestFactory extends AWorldFactory {
     @Override
     public AFauna createFauna() {
         return new FrogFauna();

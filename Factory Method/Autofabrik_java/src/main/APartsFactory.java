@@ -3,7 +3,7 @@ package main;
 import main.Parts.APart;
 
 public abstract class APartsFactory {
-    APart orderPart(partType t, CarFactory.carColor color) {
+    APart orderPart(final partType t, final CarFactory.carColor color) {
         APart p = this.createPart(t);
         System.out.println(p.getClass().getName() + ": Teil wurde hergestellt.");
         p.applyRostschutz();
@@ -13,7 +13,7 @@ public abstract class APartsFactory {
         return p;
     }
 
-    protected abstract APart createPart(partType t);
+    protected abstract APart createPart(final partType t);
 
     public enum partType {DOOR, HOOD, LID, WING}
 }

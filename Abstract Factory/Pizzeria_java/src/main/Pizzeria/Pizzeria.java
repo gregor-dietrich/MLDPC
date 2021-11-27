@@ -7,11 +7,11 @@ import main.Pizzeria.Pizza.Toppings.*;
 public final class Pizzeria {
     private AIngredientFactory ingredientFactory;
 
-    public Pizzeria(AIngredientFactory ingredientFactory) {
+    public Pizzeria(final AIngredientFactory ingredientFactory) {
         this.setIngredientFactory(ingredientFactory);
     }
 
-    private Pizza createPizza(pizzaType type) {
+    private Pizza createPizza(final pizzaType type) {
         Pizza pizza = new Pizza(this.getIngredientFactory().createDough(),
                 this.getIngredientFactory().createCheese());
         pizza.prepare();
@@ -38,7 +38,7 @@ public final class Pizzeria {
         return pizza;
     }
 
-    public Pizza orderPizza(pizzaType type) {
+    public Pizza orderPizza(final pizzaType type) {
         System.out.println("Ordering " + type + "...");
         Pizza pizza = createPizza(type);
         System.out.println(type + " has been finished!");
@@ -50,7 +50,7 @@ public final class Pizzeria {
         return ingredientFactory;
     }
 
-    private void setIngredientFactory(AIngredientFactory ingredientFactory) {
+    private void setIngredientFactory(final AIngredientFactory ingredientFactory) {
         if (ingredientFactory != null)
             this.ingredientFactory = ingredientFactory;
         else

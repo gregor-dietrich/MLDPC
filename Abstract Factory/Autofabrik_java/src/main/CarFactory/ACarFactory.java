@@ -6,19 +6,19 @@ import main.Lid.ALid;
 import main.Wing.AWing;
 
 public abstract class ACarFactory {
-    public abstract ADoor createDoor(carColor color);
+    public abstract ADoor createDoor(final carColor color);
 
-    public abstract AHood createHood(carColor color);
+    public abstract AHood createHood(final carColor color);
 
-    public abstract ALid createLid(carColor color);
+    public abstract ALid createLid(final carColor color);
 
-    public abstract AWing createWing(carColor color);
+    public abstract AWing createWing(final carColor color);
 
-    protected void applyRostschutz(APart p) {
+    protected void applyRostschutz(final APart p) {
         p.applyRostschutz();
     }
 
-    protected void applyLackierung(APart p, carColor color) {
+    protected void applyLackierung(final APart p, final carColor color) {
         p.applyLackierung(color);
     }
 

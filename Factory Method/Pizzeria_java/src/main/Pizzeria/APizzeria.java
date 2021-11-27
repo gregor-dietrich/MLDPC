@@ -5,9 +5,9 @@ import main.Pizzeria.Pizza.APizza;
 public abstract class APizzeria {
     private String className;
 
-    protected abstract APizza createPizza(pizzaType type);
+    protected abstract APizza createPizza(final pizzaType type);
 
-    public final APizza orderPizza(pizzaType type) {
+    public final APizza orderPizza(final pizzaType type) {
         System.out.println("Ordering " + type + " from " + this.getPizzeriaName());
         APizza pizza = this.createPizza(type);
         System.out.println(pizza.getPizzaName() + " has been finished!");
@@ -15,7 +15,7 @@ public abstract class APizzeria {
         return pizza;
     }
 
-    public String getPizzeriaName() {
+    public final String getPizzeriaName() {
         if (this.getClassName() == null) {
             var name = this.getClass().getName().split("\\.");
             this.setClassName(name[name.length - 1]);
@@ -27,7 +27,7 @@ public abstract class APizzeria {
         return className;
     }
 
-    private void setClassName(String className) {
+    private void setClassName(final String className) {
         this.className = className;
     }
 

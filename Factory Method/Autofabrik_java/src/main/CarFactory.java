@@ -5,17 +5,17 @@ import main.Parts.AHood;
 import main.Parts.ALid;
 import main.Parts.AWing;
 
-public class CarFactory {
+public final class CarFactory {
     private APartsFactory partsFactory;
 
-    public CarFactory(carType t) {
+    public CarFactory(final carType t) {
         switch (t) {
             case LIMO -> this.setPartsFactory(new limoPartsFactory());
             case KOMBI -> this.setPartsFactory(new kombiPartsFactory());
         }
     }
 
-    public Car orderCar(carColor color) {
+    public Car orderCar(final carColor color) {
         System.out.println(this.getPartsFactory().getClass().getName() + " stellt Teile her...");
         System.out.println();
         var door = (ADoor) this.getPartsFactory().orderPart(APartsFactory.partType.DOOR, color);
@@ -30,7 +30,7 @@ public class CarFactory {
         return partsFactory;
     }
 
-    private void setPartsFactory(APartsFactory partsFactory) {
+    private void setPartsFactory(final APartsFactory partsFactory) {
         this.partsFactory = partsFactory;
     }
 

@@ -2,10 +2,10 @@ package main;
 
 import main.Parts.*;
 
-public class limoPartsFactory extends APartsFactory {
+public final class limoPartsFactory extends APartsFactory {
 
     @Override
-    protected APart createPart(partType t) {
+    protected APart createPart(final partType t) {
         return switch (t) {
             case DOOR -> new LimoDoor();
             case HOOD -> new LimoHood();

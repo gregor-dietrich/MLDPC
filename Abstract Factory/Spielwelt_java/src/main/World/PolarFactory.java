@@ -7,7 +7,7 @@ import main.Floor.IceFloor;
 import main.Flora.AFlora;
 import main.Flora.BrushFlora;
 
-public class PolarFactory extends AWorldFactory {
+public final class PolarFactory extends AWorldFactory {
     @Override
     public AFauna createFauna() {
         return new PenguinFauna();

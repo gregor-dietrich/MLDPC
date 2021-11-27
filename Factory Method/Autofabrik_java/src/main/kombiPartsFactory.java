@@ -2,10 +2,10 @@ package main;
 
 import main.Parts.*;
 
-public class kombiPartsFactory extends APartsFactory {
+public final class kombiPartsFactory extends APartsFactory {
 
     @Override
-    protected APart createPart(partType t) {
+    protected APart createPart(final partType t) {
         return switch (t) {
             case DOOR -> new KombiDoor();
             case HOOD -> new KombiHood();

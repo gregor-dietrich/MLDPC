@@ -11,7 +11,7 @@ public class Car {
     private ALid lid;
     private AWing wing;
 
-    public Car(ADoor door, AHood hood, ALid lid, AWing wing) {
+    public Car(final ADoor door, final AHood hood, final ALid lid, final AWing wing) {
         this.setDoor(door);
         this.setHood(hood);
         this.setLid(lid);
@@ -24,7 +24,7 @@ public class Car {
         return door;
     }
 
-    private void setDoor(ADoor door) {
+    private void setDoor(final ADoor door) {
         this.door = door;
     }
 
@@ -32,7 +32,7 @@ public class Car {
         return hood;
     }
 
-    private void setHood(AHood hood) {
+    private void setHood(final AHood hood) {
         this.hood = hood;
     }
 
@@ -40,7 +40,7 @@ public class Car {
         return lid;
     }
 
-    private void setLid(ALid lid) {
+    private void setLid(final ALid lid) {
         this.lid = lid;
     }
 
@@ -48,7 +48,7 @@ public class Car {
         return wing;
     }
 
-    private void setWing(AWing wing) {
+    private void setWing(final AWing wing) {
         this.wing = wing;
     }
 }

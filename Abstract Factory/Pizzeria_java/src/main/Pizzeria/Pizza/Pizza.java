@@ -15,7 +15,7 @@ public final class Pizza {
     private ACheese cheese;
     private final ArrayList<ATopping> toppings;
 
-    public Pizza(ADough dough, ACheese cheese) {
+    public Pizza(final ADough dough, final ACheese cheese) {
         this.setDough(dough);
         this.setCheese(cheese);
         this.toppings = new ArrayList<>();
@@ -49,7 +49,7 @@ public final class Pizza {
         return prepared;
     }
 
-    private void setPrepared(boolean prepared) {
+    private void setPrepared(final boolean prepared) {
         this.prepared = prepared;
     }
 
@@ -57,7 +57,7 @@ public final class Pizza {
         return baked;
     }
 
-    private void setBaked(boolean baked) {
+    private void setBaked(final boolean baked) {
         this.baked = baked;
     }
 
@@ -65,7 +65,7 @@ public final class Pizza {
         return cut;
     }
 
-    private void setCut(boolean cut) {
+    private void setCut(final boolean cut) {
         this.cut = cut;
     }
 
@@ -73,7 +73,7 @@ public final class Pizza {
         return dough;
     }
 
-    private void setDough(ADough dough) {
+    private void setDough(final ADough dough) {
         if (dough != null)
             this.dough = dough;
         else
@@ -84,7 +84,7 @@ public final class Pizza {
         return cheese;
     }
 
-    private void setCheese(ACheese cheese) {
+    private void setCheese(final ACheese cheese) {
         if (cheese != null)
             this.cheese = cheese;
         else
@@ -95,7 +95,7 @@ public final class Pizza {
         return toppings;
     }
 
-    public void addTopping(ATopping topping) {
+    public void addTopping(final ATopping topping) {
         if (this.isPrepared() && !this.isBaked())
             if (topping != null)
                 if (this.toppings.add(topping))
@@ -104,7 +104,7 @@ public final class Pizza {
                     throw new IllegalStateException("Parameter topping must not be null.");
     }
 
-    public void removeTopping(ATopping topping) {
+    public void removeTopping(final ATopping topping) {
         if (this.isPrepared() && !this.isBaked())
             if (topping != null)
                 if (this.toppings.remove(topping))

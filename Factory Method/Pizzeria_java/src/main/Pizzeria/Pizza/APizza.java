@@ -37,7 +37,7 @@ public abstract class APizza {
         return prepared;
     }
 
-    private void setPrepared(boolean prepared) {
+    private void setPrepared(final boolean prepared) {
         this.prepared = prepared;
     }
 
@@ -45,7 +45,7 @@ public abstract class APizza {
         return baked;
     }
 
-    private void setBaked(boolean baked) {
+    private void setBaked(final boolean baked) {
         this.baked = baked;
     }
 
@@ -53,7 +53,7 @@ public abstract class APizza {
         return cut;
     }
 
-    private void setCut(boolean cut) {
+    private void setCut(final boolean cut) {
         this.cut = cut;
     }
 
@@ -69,7 +69,7 @@ public abstract class APizza {
         return className;
     }
 
-    private void setClassName(String className) {
+    private void setClassName(final String className) {
         this.className = className;
     }
 }

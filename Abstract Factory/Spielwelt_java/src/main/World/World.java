@@ -4,12 +4,12 @@ import main.Fauna.AFauna;
 import main.Floor.AFloor;
 import main.Flora.AFlora;
 
-public class World {
+public final class World {
     private AFauna fauna;
     private AFloor floor;
     private AFlora flora;
 
-    public World(AFauna fauna, AFloor floor, AFlora flora) {
+    public World(final AFauna fauna, final AFloor floor, final AFlora flora) {
         setFauna(fauna);
         setFloor(floor);
         setFlora(flora);
@@ -19,7 +19,7 @@ public class World {
         return fauna;
     }
 
-    public void setFauna(AFauna fauna) {
+    public void setFauna(final AFauna fauna) {
         this.fauna = fauna;
     }
 
@@ -27,7 +27,7 @@ public class World {
         return floor;
     }
 
-    public void setFloor(AFloor floor) {
+    public void setFloor(final AFloor floor) {
         this.floor = floor;
     }
 
@@ -35,7 +35,7 @@ public class World {
         return flora;
     }
 
-    public void setFlora(AFlora flora) {
+    public void setFlora(final AFlora flora) {
         this.flora = flora;
     }
 }

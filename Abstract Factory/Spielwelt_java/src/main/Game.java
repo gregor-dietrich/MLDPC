@@ -6,11 +6,11 @@ import main.Flora.AFlora;
 import main.World.AWorldFactory;
 import main.World.World;
 
-public class Game {
+public final class Game {
     private AWorldFactory factory;
     private World world;
 
-    public Game(AWorldFactory factory) {
+    public Game(final AWorldFactory factory) {
         this.setFactory(factory);
         this.createWorld();
     }
@@ -36,7 +36,7 @@ public class Game {
         return world;
     }
 
-    private void setWorld(World world) {
+    private void setWorld(final World world) {
         this.world = world;
     }
 
@@ -44,7 +44,7 @@ public class Game {
         return factory;
     }
 
-    public void setFactory(AWorldFactory factory) {
+    public void setFactory(final AWorldFactory factory) {
         this.factory = factory;
     }
 }

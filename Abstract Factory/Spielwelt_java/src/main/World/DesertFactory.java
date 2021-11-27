@@ -7,7 +7,7 @@ import main.Floor.SandFloor;
 import main.Flora.AFlora;
 import main.Flora.CactusFlora;
 
-public class DesertFactory extends AWorldFactory {
+public final class DesertFactory extends AWorldFactory {
     @Override
     public AFauna createFauna() {
         return new CamelFauna();

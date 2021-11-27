@@ -11,12 +11,12 @@ public abstract class APart {
         System.out.println(this.getClass().getName() + ": Rostschutz auftragen...");
     }
 
-    public void applyLackierung(CarFactory.carColor color) {
+    public void applyLackierung(final CarFactory.carColor color) {
         this.setColor(color);
         System.out.println(this.getClass().getName() + ": Lackierung auftragen " + "(" + color.toString() + ")" + "...");
     }
 
-    private void setColor(CarFactory.carColor color) {
+    private void setColor(final CarFactory.carColor color) {
         this.color = color;
     }
 
@@ -24,7 +24,7 @@ public abstract class APart {
         return rostschutz;
     }
 
-    public void setRostschutz(boolean rostschutz) {
+    public void setRostschutz(final boolean rostschutz) {
         this.rostschutz = rostschutz;
     }
 }

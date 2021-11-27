@@ -3,9 +3,9 @@ package main.Pizzeria;
 import main.Pizzeria.Pizza.APizza;
 import main.Pizzeria.Pizza.Italian.*;
 
-public class PizzeriaItalia extends APizzeria {
+public final class PizzeriaItalia extends APizzeria {
     @Override
-    protected APizza createPizza(pizzaType type) {
+    protected APizza createPizza(final pizzaType type) {
         APizza pizza = switch (type) {
             case FUNGHI -> new ItalianFunghi();
             case HAWAII -> new ItalianHawaii();
