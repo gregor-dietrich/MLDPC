@@ -7,12 +7,12 @@ Beispiele für Design Patterns in diversen Programmiersprachen
 | Strategy Pattern | Verhaltensmuster | ✔️ | ✔️ | ✔️ |
 | Template Pattern | Verhaltensmuster | ✔️ | ✔️ | ❌ |
 | Observer Pattern | Verhaltensmuster | ❌ | ✔️ | ❌ |
-| Factory Method | Erzeugendes Muster | ✔️ | ✔️ | ❌ |
-| Abstract Factory | Erzeugendes Muster | ✔️ | ✔️ | ❌ |
-| Singleton Pattern | Erzeugendes Muster | ✔️ | ✔️ | ❌ |
-| Composite Pattern | Strukturelles Muster | ❌ | ❌ | ❌ |
-| Decorator Pattern | Strukturelles Muster | ❌ | ❌ | ❌ |
-| Command Pattern | Strukturelles Muster | ❌ | ❌ | ❌ |
-| State Pattern | Strukturelles Muster | ❌ | ❌ | ❌ |
-| Adapter Pattern | Strukturelles Muster | ❌ | ❌ | ❌ |
-| Facade Pattern | Strukturelles Muster | ❌ | ❌ | ❌ |
+| Factory Method | Erzeugungsmuster | ✔️ | ✔️ | ❌ |
+| Abstract Factory | Erzeugungsmuster | ✔️ | ✔️ | ❌ |
+| Singleton Pattern | Erzeugungsmuster | ✔️ | ✔️ | ❌ |
+| Composite Pattern | Strukturmuster | ❌ | ❌ | ❌ |
+| Decorator Pattern | Strukturmuster | ❌ | ❌ | ❌ |
+| Command Pattern | Verhaltensmuster | ❌ | ❌ | ❌ |
+| State Pattern | Verhaltensmuster | ❌ | ❌ | ❌ |
+| Adapter Pattern | Strukturmuster | ❌ | ❌ | ❌ |
+| Facade Pattern | Strukturmuster | ❌ | ❌ | ❌ |
