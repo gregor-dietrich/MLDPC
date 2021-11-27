@@ -139,20 +139,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Koenig.cpp" />
-    <ClCompile Include="Koenigin.cpp" />
-    <ClCompile Include="Ritter.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Spielfigur.cpp" />
-    <ClCompile Include="Troll.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IWaffenverhalten.h" />
-    <ClInclude Include="Koenig.h" />
-    <ClInclude Include="Koenigin.h" />
-    <ClInclude Include="Ritter.h" />
+    <ClInclude Include="Waffenverhalten.h" />
     <ClInclude Include="Spielfigur.h" />
-    <ClInclude Include="Troll.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

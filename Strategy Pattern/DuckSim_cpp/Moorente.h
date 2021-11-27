@@ -6,5 +6,5 @@ class Moorente :
 public:
 	Moorente(IQuakverhalten *qv, IFlugverhalten *fv);
 
-	void anzeigen() override;
+	auto anzeigen() -> void override;
 };

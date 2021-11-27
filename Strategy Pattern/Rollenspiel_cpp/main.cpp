@@ -1,16 +1,11 @@
 #include <vector>
 
 #include "Spielfigur.h"
-#include "Koenig.h"
-#include "Koenigin.h"
-#include "Ritter.h"
-#include "Troll.h"
-
-#include "IWaffenverhalten.h"
+#include "Waffenverhalten.h"
 
 int main(int argc, const char* argv[])
 {
-    // Implementierte Klassen instanziieren
+	// Implementierte Klassen instanziieren
 	std::vector<Spielfigur*> spielfiguren =
 	{
 		new Koenig(new Schwertschwingen()),

@@ -12,49 +12,49 @@ Ente::~Ente()
 	delete this->flugEigenschaft;
 }
 
-void Ente::anzeigen()
+auto Ente::anzeigen() -> void
 {
 	std::cout << "Ich bin eine Ente vom Typ: ";
 }
 
-void Ente::schwimmen()
+auto Ente::schwimmen() -> void
 {
 	std::cout << getClassName() << " schwimmt.\n";
 }
 
-void Ente::fliegenAusfuehren()
+auto Ente::fliegenAusfuehren() -> void
 {
 	this->getFlugverhalten()->fliegen();
 }
 
-void Ente::quakAusfuehren()
+auto Ente::quakAusfuehren() -> void
 {
 	this->getQuakverhalten()->quaken();
 }
 
-void Ente::setFlugverhalten(IFlugverhalten *fv)
+auto Ente::setFlugverhalten(IFlugverhalten* fv) -> void
 {
 	delete this->flugEigenschaft;
 	this->flugEigenschaft = fv;
 }
 
-void Ente::setQuakverhalten(IQuakverhalten *qv)
+auto Ente::setQuakverhalten(IQuakverhalten* qv) -> void
 {
 	delete this->quakArt;
 	this->quakArt = qv;
 }
 
-IFlugverhalten* Ente::getFlugverhalten()
+auto Ente::getFlugverhalten() -> IFlugverhalten*
 {
 	return this->flugEigenschaft;
 }
 
-IQuakverhalten* Ente::getQuakverhalten()
+auto Ente::getQuakverhalten() -> IQuakverhalten*
 {
 	return this->quakArt;
 }
 
-std::string Ente::getClassName()
+auto Ente::getClassName() -> std::string
 {
 	auto name = std::string(typeid(*this).name()).substr(6, std::string::npos);
 	return name;

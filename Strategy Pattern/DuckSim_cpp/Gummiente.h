@@ -6,5 +6,5 @@ class Gummiente :
 public:
 	Gummiente(IQuakverhalten *qv, IFlugverhalten *fv);
 
-	void anzeigen() override;
+	auto anzeigen() -> void override;
 };

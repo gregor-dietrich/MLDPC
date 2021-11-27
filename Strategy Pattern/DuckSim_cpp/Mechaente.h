@@ -6,5 +6,5 @@ class Mechaente :
 public:
 	Mechaente(IQuakverhalten *qv, IFlugverhalten *fv);
 
-	void anzeigen() override;
+	auto anzeigen() -> void override;
 };

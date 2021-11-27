@@ -6,5 +6,5 @@ class Entenattrappe :
 public:
 	Entenattrappe(IQuakverhalten *qv, IFlugverhalten *fv);
 
-	void anzeigen() override;
+	auto anzeigen() -> void override;
 };

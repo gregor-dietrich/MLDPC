@@ -13,15 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Headerdateien\Spielfiguren">
-      <UniqueIdentifier>{740a2db5-d347-4afb-947f-d64dabca4abd}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Quelldateien\Spielfiguren">
-      <UniqueIdentifier>{35d0a9ec-5815-4566-8459-325b51f0c545}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Headerdateien\Interfaces">
-      <UniqueIdentifier>{06e296ff-156b-46ef-901a-0648e0ecd56e}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -30,37 +21,13 @@
     <ClCompile Include="Spielfigur.cpp">
       <Filter>Quelldateien</Filter>
     </ClCompile>
-    <ClCompile Include="Koenig.cpp">
-      <Filter>Quelldateien\Spielfiguren</Filter>
-    </ClCompile>
-    <ClCompile Include="Koenigin.cpp">
-      <Filter>Quelldateien\Spielfiguren</Filter>
-    </ClCompile>
-    <ClCompile Include="Ritter.cpp">
-      <Filter>Quelldateien\Spielfiguren</Filter>
-    </ClCompile>
-    <ClCompile Include="Troll.cpp">
-      <Filter>Quelldateien\Spielfiguren</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Spielfigur.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
-    <ClInclude Include="Koenig.h">
-      <Filter>Headerdateien\Spielfiguren</Filter>
-    </ClInclude>
-    <ClInclude Include="Koenigin.h">
-      <Filter>Headerdateien\Spielfiguren</Filter>
-    </ClInclude>
-    <ClInclude Include="Ritter.h">
-      <Filter>Headerdateien\Spielfiguren</Filter>
-    </ClInclude>
-    <ClInclude Include="Troll.h">
-      <Filter>Headerdateien\Spielfiguren</Filter>
-    </ClInclude>
-    <ClInclude Include="IWaffenverhalten.h">
-      <Filter>Headerdateien\Interfaces</Filter>
+    <ClInclude Include="Waffenverhalten.h">
+      <Filter>Headerdateien</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

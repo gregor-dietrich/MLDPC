@@ -2,13 +2,13 @@
 class IQuakverhalten
 {
 public:
-	virtual void quaken() = 0;
+	virtual auto quaken() -> void = 0;
 };
 
 class Quaken : public IQuakverhalten
 {
 public:
-	void quaken() override
+	auto quaken() -> void override
 	{
 		std::cout << "Quak!\n";
 	}
@@ -17,7 +17,7 @@ public:
 class Quietschen : public IQuakverhalten
 {
 public:
-	void quaken() override
+	auto quaken() -> void override
 	{
 		std::cout << "Quietsch!\n";
 	}
@@ -26,7 +26,7 @@ public:
 class Still : public IQuakverhalten
 {
 public:
-	void quaken() override
+	auto quaken() -> void override
 	{
 		std::cout << "Ich bin still!\n";
 	}

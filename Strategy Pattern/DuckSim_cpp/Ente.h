@@ -9,21 +9,21 @@ class Ente
 {
 public:
 	Ente(IQuakverhalten *qv, IFlugverhalten *fv);
-	~Ente();
+	virtual ~Ente();
 	
-	virtual void anzeigen();
+	virtual auto anzeigen() -> void;
 	
-	void schwimmen();
-	void fliegenAusfuehren();
-	void quakAusfuehren();
-	void setFlugverhalten(IFlugverhalten *fv);
-	void setQuakverhalten(IQuakverhalten *qv);
+	virtual auto schwimmen() -> void;
+	virtual auto fliegenAusfuehren() -> void;
+	virtual auto quakAusfuehren() -> void;
+	virtual auto setFlugverhalten(IFlugverhalten* fv) -> void;
+	virtual auto setQuakverhalten(IQuakverhalten* qv) -> void;
 
 protected:
-	IFlugverhalten* getFlugverhalten();
-	IQuakverhalten* getQuakverhalten();
+	virtual auto getFlugverhalten() -> IFlugverhalten*;
+	virtual auto getQuakverhalten() -> IQuakverhalten*;
 	
-	std::string getClassName();
+	virtual auto getClassName() -> std::string;
 
 private:
 	IFlugverhalten* flugEigenschaft;

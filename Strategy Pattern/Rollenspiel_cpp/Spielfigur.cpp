@@ -1,6 +1,6 @@
 #include "Spielfigur.h"
 
-Spielfigur::Spielfigur(IWaffenverhalten *wv)
+Spielfigur::Spielfigur(Waffenverhalten *wv)
 {
 	setWaffe(wv);
 }
@@ -10,35 +10,34 @@ Spielfigur::~Spielfigur()
 	delete this->waffe;
 }
 
-void Spielfigur::anzeigen()
+auto Spielfigur::anzeigen() -> void
 {
-	std::cout << "Ich bin eine Spielfigur vom Typ " << this->getClassName() << " und ich benutze " << this->getWaffenName() << ".\n";
+	std::cout << "Ich bin eine Spielfigur vom Typ " << this->getClassName();
+	std::cout << " und ich benutze " << this->getWaffenName() << ".\n";
 }
 
-void Spielfigur::kaempfen()
+auto Spielfigur::kaempfen() -> void
 {
 	this->getWaffe()->benutzeWaffe();
 }
 
-void Spielfigur::setWaffe(IWaffenverhalten* wv)
+auto Spielfigur::setWaffe(Waffenverhalten* wv) -> void
 {
 	delete this->waffe;
 	this->waffe = wv;
 }
 
-IWaffenverhalten* Spielfigur::getWaffe()
+auto Spielfigur::getWaffe() -> Waffenverhalten*
 {
 	return this->waffe;
 }
 
-std::string Spielfigur::getClassName()
+auto Spielfigur::getClassName() -> std::string
 {
-	auto name = std::string(typeid(*this).name()).substr(6, std::string::npos);
-	return name;
+	return std::string(typeid(*this).name()).substr(6, std::string::npos);
 }
 
-std::string Spielfigur::getWaffenName()
+auto Spielfigur::getWaffenName() -> std::string
 {
-	auto waffenName = std::string(typeid(*this->getWaffe()).name()).substr(6, std::string::npos);
-	return waffenName;
+	return std::string(typeid(*this->getWaffe()).name()).substr(6, std::string::npos);
 }

@@ -2,13 +2,13 @@
 class IFlugverhalten
 {
 public:
-	virtual void fliegen() = 0;
+	virtual auto fliegen() -> void = 0;
 };
 
 class NichtFliegen : public IFlugverhalten
 {
 public:
-	void fliegen() override
+	auto fliegen() -> void override
 	{
 		std::cout << "Ich kann nicht fliegen!\n";
 	}
@@ -17,7 +17,7 @@ public:
 class Fluegelschlagen : public IFlugverhalten
 {
 public:
-	void fliegen() override
+	auto fliegen() -> void override
 	{
 		std::cout << "Ich fliege mit meinen Fluegeln!\n";
 	}
@@ -26,7 +26,7 @@ public:
 class Gleiten : public IFlugverhalten
 {
 public:
-	void fliegen() override
+	auto fliegen() -> void override
 	{
 		std::cout << "Ich gleite dahin!\n";
 	}
@@ -35,7 +35,7 @@ public:
 class Duesenantriebsfliegen : public IFlugverhalten
 {
 public:
-	void fliegen() override
+	auto fliegen() -> void override
 	{
 		std::cout << "Ich benutze einen Duesenantrieb!\n";
 	}
