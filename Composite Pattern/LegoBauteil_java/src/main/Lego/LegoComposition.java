@@ -2,14 +2,14 @@ package main.Lego;
 
 import java.util.ArrayList;
 
-public final class BauKomposition extends ABauteil {
-    private final ArrayList<ABauteil> pieces;
+public final class LegoComposition implements ILego {
+    private final ArrayList<ILego> pieces;
 
-    public BauKomposition() {
+    public LegoComposition() {
         this.pieces = new ArrayList<>();
     }
 
-    public BauKomposition(ArrayList<ABauteil> pieces) {
+    public LegoComposition(final ArrayList<ILego> pieces) {
         this.pieces = pieces;
     }
 
@@ -21,15 +21,15 @@ public final class BauKomposition extends ABauteil {
         return price;
     }
 
-    public boolean addPiece(ABauteil piece) {
+    public boolean addPiece(final ILego piece) {
         return this.getPieces().add(piece);
     }
 
-    private boolean removePiece(ABauteil piece) {
+    public boolean removePiece(final ILego piece) {
         return this.getPieces().remove(piece);
     }
 
-    public ArrayList<ABauteil> getPieces() {
+    public ArrayList<ILego> getPieces() {
         return pieces;
     }
 }
