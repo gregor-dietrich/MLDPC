@@ -30,9 +30,9 @@ public class Main {
         /* Variant 3
         final var legoDeathStar = new LegoComposition();
         for (int i = 0; i < 100; i++) {
-            var LegoComposition = new LegoComposition();
+            var rngComposition = new LegoComposition();
             for (int j = 0; j < 100; j++)
-                LegoComposition.addPiece(new LegoPiece("grey", 1, 1));
+                rngComposition.addPiece(new LegoPiece("grey", 1, 1));
             legoDeathStar.addPiece(LegoComposition);
         }
         */

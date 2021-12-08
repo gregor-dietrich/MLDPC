@@ -21,7 +21,7 @@ public final class Manager implements IPerson {
     @Override
     public String toString() {
         var list = new StringBuilder();
-        list.append(super.toString() + " - Subordinates:\n");
+        list.append(super.toString() + " - Subordinates (" + this.getSubordinateCount() + "):\n");
         for (var m : subordinates) {
             list.append(m.toString());
             if (subordinates.indexOf(m) != (subordinates.size() - 1))
