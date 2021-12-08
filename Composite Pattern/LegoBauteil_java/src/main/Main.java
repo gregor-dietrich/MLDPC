@@ -12,7 +12,7 @@ public class Main {
         // Variant 1+2
         final ArrayList<ILego> components = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
-            var rngComposition = new LegoComposition();
+            final var rngComposition = new LegoComposition();
             for (int j = 0; j < 100; j++)
                 rngComposition.addPiece(new LegoPiece("grey", 1, 1));
             components.add(rngComposition);
@@ -30,7 +30,7 @@ public class Main {
         /* Variant 3
         final var legoDeathStar = new LegoComposition();
         for (int i = 0; i < 100; i++) {
-            var rngComposition = new LegoComposition();
+            final var rngComposition = new LegoComposition();
             for (int j = 0; j < 100; j++)
                 rngComposition.addPiece(new LegoPiece("grey", 1, 1));
             legoDeathStar.addPiece(LegoComposition);

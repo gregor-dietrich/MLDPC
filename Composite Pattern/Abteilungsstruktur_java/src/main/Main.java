@@ -12,7 +12,7 @@ public class Main {
         // Variant 1+2
         final ArrayList<IPerson> departmentHeads = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
-            var manager = new Manager();
+            final var manager = new Manager();
             for (int j = 0; j < (i + 2); j++)
                 manager.addSubordinate(new Subordinate());
             departmentHeads.add(manager);
@@ -30,7 +30,7 @@ public class Main {
         /* Variant 3
         final var ceo = new Manager();
         for (int i = 0; i < 3; i++) {
-            var manager = new Manager();
+            final var manager = new Manager();
             for (int j = 0; j < (i + 2); j++)
                 manager.addSubordinate(new Subordinate());
             ceo.addSubordinate(manager);
