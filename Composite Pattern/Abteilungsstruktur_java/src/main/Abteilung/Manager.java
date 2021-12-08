@@ -15,7 +15,13 @@ public final class Manager implements IPerson {
 
     @Override
     public int getSubordinateCount() {
-        return this.getSubordinates().size();
+        int count = 0;
+        for (var subordinate : subordinates) {
+            if (subordinate instanceof Manager)
+                count += 1;
+            count += subordinate.getSubordinateCount();
+        }
+        return count;
     }
 
     @Override
