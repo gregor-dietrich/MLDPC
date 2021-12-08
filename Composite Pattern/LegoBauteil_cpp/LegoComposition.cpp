@@ -14,7 +14,8 @@ auto LegoComposition::getPrice() const -> double
 {
 	double price = 0;
 	for (const auto& piece : this->getPieces())
-		price += piece->getPrice();
+		if (piece != nullptr)
+			price += piece->getPrice();
 	return price;
 }
 
