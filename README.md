@@ -11,7 +11,7 @@ Beispiele für Design Patterns in diversen Programmiersprachen
 | Abstract Factory | Erzeugungsmuster | ✔️ | ✔️ | ❌ |
 | Singleton Pattern | Erzeugungsmuster | ✔️ | ✔️ | ❌ |
 | Composite Pattern | Strukturmuster | ✔️ | ✔️ | ❌ |
-| Decorator Pattern | Strukturmuster | ❌ | ❌ | ❌ |
+| Decorator Pattern | Strukturmuster | ❌ | ✔️ | ❌ |
 | Command Pattern | Verhaltensmuster | ❌ | ❌ | ❌ |
 | State Pattern | Verhaltensmuster | ❌ | ❌ | ❌ |
 | Adapter Pattern | Strukturmuster | ❌ | ❌ | ❌ |
