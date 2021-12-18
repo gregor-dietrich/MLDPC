@@ -1,27 +1,23 @@
 package main.Debuffs;
 
-import main.ADecorator;
-import main.Character;
+import main.Classes.ACharacter;
 import main.Game;
 
 public final class ReverseDebuff extends ADecorator {
-    public ReverseDebuff(final Character pObj) {
+    public ReverseDebuff(final ACharacter pObj) {
         super(pObj);
     }
 
     @Override
-    public int getMaxMoveDistance() {
-        return this.getPObj().getMaxMoveDistance();
-    }
-
-    @Override
     public void move(final Game.directions direction, final int steps) {
+        var newDirection = direction;
         switch (direction) {
-            case NORTH -> super.move(Game.directions.SOUTH, steps);
-            case EAST -> super.move(Game.directions.WEST, steps);
-            case SOUTH -> super.move(Game.directions.NORTH, steps);
-            case WEST -> super.move(Game.directions.EAST, steps);
+            case NORTH -> newDirection = Game.directions.SOUTH;
+            case EAST -> newDirection = Game.directions.WEST;
+            case SOUTH -> newDirection = Game.directions.NORTH;
+            case WEST -> newDirection = Game.directions.EAST;
         }
+        this.getPObj().move(newDirection, steps);
     }
 
     @Override

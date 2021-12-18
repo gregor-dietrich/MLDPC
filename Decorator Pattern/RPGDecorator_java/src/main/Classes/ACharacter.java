@@ -1,16 +1,18 @@
-package main;
+package main.Classes;
 
-public class Character {
+import main.Game;
+
+public abstract class ACharacter {
     private int vitality;
     private int strength;
     private int endurance;
     private int intelligence;
 
-    public Character() {
+    public ACharacter() {
         this(0, 0, 0, 0);
     }
 
-    public Character(final int vitality, final int strength, final int endurance, final int intelligence) {
+    public ACharacter(final int vitality, final int strength, final int endurance, final int intelligence) {
         this.setVitality(vitality);
         this.setStrength(strength);
         this.setEndurance(endurance);
@@ -35,35 +37,35 @@ public class Character {
         System.out.println(this + " says: \"" + text + "\"");
     }
 
-    public int getVitality() {
+    public final int getVitality() {
         return vitality;
     }
 
-    public void setVitality(final int vitality) {
+    public final void setVitality(final int vitality) {
         this.vitality = clampStat(0, 10, vitality);
     }
 
-    public int getStrength() {
+    public final int getStrength() {
         return strength;
     }
 
-    public void setStrength(final int strength) {
+    public final void setStrength(final int strength) {
         this.strength = clampStat(0, 10, strength);
     }
 
-    public int getEndurance() {
+    public final int getEndurance() {
         return endurance;
     }
 
-    public void setEndurance(final int endurance) {
+    public final void setEndurance(final int endurance) {
         this.endurance = clampStat(0, 10, endurance);
     }
 
-    public int getIntelligence() {
+    public final int getIntelligence() {
         return intelligence;
     }
 
-    public void setIntelligence(final int intelligence) {
+    public final void setIntelligence(final int intelligence) {
         this.intelligence = clampStat(0, 10, intelligence);
     }
 

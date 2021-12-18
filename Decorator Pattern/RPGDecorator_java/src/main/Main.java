@@ -1,5 +1,6 @@
 package main;
 
+import main.Classes.ACharacter;
 import main.Classes.Ranger;
 import main.Classes.SwampSpirit;
 import main.Debuffs.AlcoholDebuff;
@@ -10,17 +11,17 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        final var characters = new ArrayList<Character>();
-        characters.add(new Ranger(new Character(6, 3, 10, 6)));
-        characters.add(new SwampSpirit(new Character(4, 5, 10, 2)));
-        characters.add(new AlcoholDebuff(characters.get(0)));
-        characters.add(new AlcoholDebuff(characters.get(1)));
-        characters.add(new ReverseDebuff(characters.get(0)));
-        characters.add(new ReverseDebuff(characters.get(1)));
-        characters.add(new AlcoholDebuff(new ReverseDebuff(characters.get(0))));
-        characters.add(new AlcoholDebuff(new ReverseDebuff(characters.get(1))));
-        characters.add(new ReverseDebuff(new AlcoholDebuff(characters.get(0))));
-        characters.add(new ReverseDebuff(new AlcoholDebuff(characters.get(1))));
+        final var characters = new ArrayList<ACharacter>();
+        characters.add(new Ranger(5, 7, 10, 3));
+        characters.add(new SwampSpirit(4, 3, 10, 8));
+        characters.add(new AlcoholDebuff(new Ranger(5, 7, 10, 3)));
+        characters.add(new AlcoholDebuff(new SwampSpirit(4, 3, 10, 8)));
+        characters.add(new ReverseDebuff(new Ranger(5, 7, 10, 3)));
+        characters.add(new ReverseDebuff(new SwampSpirit(4, 3, 10, 8)));
+        characters.add(new AlcoholDebuff(new ReverseDebuff(new Ranger(5, 7, 10, 3))));
+        characters.add(new AlcoholDebuff(new ReverseDebuff(new SwampSpirit(4, 3, 10, 8))));
+        characters.add(new ReverseDebuff(new AlcoholDebuff(new Ranger(5, 7, 10, 3))));
+        characters.add(new ReverseDebuff(new AlcoholDebuff(new SwampSpirit(4, 3, 10, 8))));
 
         for (final var character : characters) {
             character.speak("Hello Earthlings!");

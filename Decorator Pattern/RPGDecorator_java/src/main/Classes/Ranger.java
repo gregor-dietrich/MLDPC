@@ -1,26 +1,17 @@
 package main.Classes;
 
-import main.ADecorator;
-import main.Character;
-import main.Game;
+public final class Ranger extends ACharacter {
+    public Ranger() {
+        this(0, 0, 0, 0);
+    }
 
-public final class Ranger extends ADecorator {
-    public Ranger(final Character pObj) {
-        super(pObj);
+    public Ranger(final int vitality, final int strength, final int endurance, final int intelligence) {
+        super(vitality, strength, endurance, intelligence);
     }
 
     @Override
     public int getMaxMoveDistance() {
-        return this.getPObj().getEndurance() * 2;
+        return super.getMaxMoveDistance() * 2;
     }
 
-    @Override
-    public void move(final Game.directions direction, final int steps) {
-        super.move(direction, steps);
-    }
-
-    @Override
-    public void speak(final String text) {
-        this.getPObj().speak(text);
-    }
 }
