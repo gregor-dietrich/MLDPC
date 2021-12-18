@@ -16,20 +16,26 @@ public final class StereoSystem extends ATarget {
 
     public void turnOn() {
         if (!isOn())
-            System.out.println(this + " has been turned on.");
+            System.out.println(this + " (" + this.getDescription() + ") has been turned on.");
+        else
+            System.out.println(this + " (" + this.getDescription() + ") is already turned on.");
         this.setOn(true);
     }
 
     public void turnOff() {
         if (isOn())
-            System.out.println(this + " has been turned off.");
+            System.out.println(this + " (" + this.getDescription() + ") has been turned off.");
+        else
+            System.out.println(this + " (" + this.getDescription() + ") is already turned off.");
         this.setOn(false);
     }
 
     public void play() {
-        if (on)
-            System.out.println(this + " is playing audio from " + this.currentMode.name()
+        if (isOn())
+            System.out.println(this + " (" + this.getDescription() + ") is playing audio from " + this.currentMode.name()
                     + " at volume " + this.getVolume() + ".");
+        else
+            System.out.println("Nothing happened.");
     }
 
     public int getVolume() {

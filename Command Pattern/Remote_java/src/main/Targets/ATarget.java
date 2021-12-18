@@ -4,7 +4,7 @@ public abstract class ATarget {
     private String description;
 
     public ATarget() {
-        this("N/A");
+        this("Unnamed");
     }
 
     public ATarget(final String description) {

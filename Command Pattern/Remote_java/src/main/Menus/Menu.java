@@ -1,4 +1,4 @@
-package main;
+package main.Menus;
 
 import main.Commands.ICommand;
 

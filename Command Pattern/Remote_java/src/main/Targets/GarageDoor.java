@@ -13,13 +13,17 @@ public final class GarageDoor extends ATarget {
 
     public void open() {
         if (!isOpen())
-            System.out.println(this + " has been opened.");
+            System.out.println(this + " (" + this.getDescription() + ") has been opened.");
+        else
+            System.out.println(this + " (" + this.getDescription() + ") is already open.");
         this.setOpen(true);
     }
 
     public void close() {
         if (isOpen())
-            System.out.println(this + " has been closed.");
+            System.out.println(this + " (" + this.getDescription() + ") has been closed.");
+        else
+            System.out.println(this + " (" + this.getDescription() + ") is already closed.");
         this.setOpen(false);
     }
 

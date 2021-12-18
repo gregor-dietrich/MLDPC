@@ -1,4 +1,4 @@
-package main;
+package main.Remotes;
 
 import main.Commands.DummyCommand;
 import main.Commands.ICommand;

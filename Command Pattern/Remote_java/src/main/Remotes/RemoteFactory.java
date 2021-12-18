@@ -1,4 +1,4 @@
-package main;
+package main.Remotes;
 
 import main.Commands.*;
 import main.Targets.GarageDoor;
@@ -6,7 +6,7 @@ import main.Targets.Light;
 import main.Targets.StereoSystem;
 
 public final class RemoteFactory {
-    public Remote makeDefaultRemote() {
+    public static Remote makeDefaultRemote() {
         // Targets
         final var garageDoor = new GarageDoor();
         final var corridorLight = new Light("Corridor");
