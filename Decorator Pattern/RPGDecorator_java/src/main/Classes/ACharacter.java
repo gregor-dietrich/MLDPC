@@ -37,35 +37,35 @@ public abstract class ACharacter {
         System.out.println(this + " says: \"" + text + "\"");
     }
 
-    public final int getVitality() {
+    public int getVitality() {
         return vitality;
     }
 
-    public final void setVitality(final int vitality) {
+    public void setVitality(final int vitality) {
         this.vitality = clampStat(0, 10, vitality);
     }
 
-    public final int getStrength() {
+    public int getStrength() {
         return strength;
     }
 
-    public final void setStrength(final int strength) {
+    public void setStrength(final int strength) {
         this.strength = clampStat(0, 10, strength);
     }
 
-    public final int getEndurance() {
+    public int getEndurance() {
         return endurance;
     }
 
-    public final void setEndurance(final int endurance) {
+    public void setEndurance(final int endurance) {
         this.endurance = clampStat(0, 10, endurance);
     }
 
-    public final int getIntelligence() {
+    public int getIntelligence() {
         return intelligence;
     }
 
-    public final void setIntelligence(final int intelligence) {
+    public void setIntelligence(final int intelligence) {
         this.intelligence = clampStat(0, 10, intelligence);
     }
 

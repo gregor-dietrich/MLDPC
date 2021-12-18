@@ -10,14 +10,12 @@ public final class ReverseDebuff extends ADecorator {
 
     @Override
     public void move(final Game.directions direction, final int steps) {
-        var newDirection = direction;
         switch (direction) {
-            case NORTH -> newDirection = Game.directions.SOUTH;
-            case EAST -> newDirection = Game.directions.WEST;
-            case SOUTH -> newDirection = Game.directions.NORTH;
-            case WEST -> newDirection = Game.directions.EAST;
+            case NORTH -> this.getPObj().move(Game.directions.SOUTH, steps);
+            case EAST -> this.getPObj().move(Game.directions.WEST, steps);
+            case SOUTH -> this.getPObj().move(Game.directions.NORTH, steps);
+            case WEST -> this.getPObj().move(Game.directions.EAST, steps);
         }
-        this.getPObj().move(newDirection, steps);
     }
 
     @Override
