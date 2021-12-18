@@ -46,34 +46,38 @@ public class Main {
         System.out.println("(0) Quit Application");
         System.out.println("Choose a menu by typing the number to its left:");
         var selectedMenu = waitForInput(menus.size());
-        if (selectedMenu > 0) {
-            var selectedCommand = -1;
-            while (selectedCommand != 0) {
-                menus.get(selectedMenu - 1).show();
-                selectedCommand = waitForInput(menus.get(selectedMenu - 1).getCommandCount());
-                if (selectedCommand > 0)
-                    menus.get(selectedMenu - 1).runCommand(selectedCommand - 1);
-                else
-                    System.out.println("Returning to main menu...");
-            }
-            mainLoop();
-        } else {
+        if (selectedMenu > 0)
+            subLoop(selectedMenu);
+        else {
             System.out.println("Exiting...");
             System.exit(0);
         }
     }
 
+    private static void subLoop(final int menu) {
+        menus.get(menu - 1).show();
+        var selectedCommand = waitForInput(menus.get(menu - 1).getCommandCount());
+        if (selectedCommand > 0) {
+            menus.get(menu - 1).runCommand(selectedCommand - 1);
+            subLoop(menu);
+        }
+        else {
+            System.out.println("Returning to main menu...");
+            mainLoop();
+        }
+    }
+
     private static int waitForInput(final int max) {
         final var reader = new BufferedReader(new InputStreamReader(System.in));
-        var input = -1;
         try {
-            input = Integer.parseInt(reader.readLine());
-            if (!(input >= 0 && input <= max))
+            var input = Integer.parseInt(reader.readLine());
+            if (input < 0 || input > max)
                 throw new IllegalArgumentException();
-        } catch (IllegalArgumentException | IOException ignored) {
+            return input;
+        }
+        catch (IllegalArgumentException | IOException ignored) {
             System.out.println("Hmm... something went wrong. Please try again.");
             return waitForInput(max);
         }
-        return input;
     }
 }
