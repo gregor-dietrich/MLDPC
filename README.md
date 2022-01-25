@@ -5,7 +5,7 @@ Beispiele für Design Patterns in diversen Programmiersprachen
 | Pattern | Typ | C++ | Java | Python |
 | ------ | ------ | ------ | ------ | ------ |
 | Strategy Pattern | Verhaltensmuster | ✔️ | ✔️ | ✔️ |
-| Template Pattern | Verhaltensmuster | ✔️ | ✔️ | ❌ |
+| Template Method | Verhaltensmuster | ✔️ | ✔️ | ❌ |
 | Observer Pattern | Verhaltensmuster | ❌ | ✔️ | ❌ |
 | Factory Method | Erzeugungsmuster | ✔️ | ✔️ | ❌ |
 | Abstract Factory | Erzeugungsmuster | ✔️ | ✔️ | ❌ |
