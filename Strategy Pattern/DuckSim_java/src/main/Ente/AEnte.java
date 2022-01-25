@@ -33,11 +33,10 @@ public abstract class AEnte {
     }
 
     public final void setFlugEigenschaft(final IFlugverhalten fv) {
-        if (fv != null) {
+        if (fv != null)
             this.flugEigenschaft = fv;
-        } else {
+        else
             throw new IllegalStateException();
-        }
     }
 
     private IQuakverhalten getQuakArt() {
@@ -45,15 +44,14 @@ public abstract class AEnte {
     }
 
     public final void setQuakArt(final IQuakverhalten qv) {
-        if (qv != null) {
+        if (qv != null)
             this.quakArt = qv;
-        } else {
+        else
             throw new IllegalStateException();
-        }
     }
 
     private String getClassName() {
-        var name = this.getClass().getName().split("\\.");
+        final var name = this.getClass().getName().split("\\.");
         return name[name.length - 1];
     }
 }

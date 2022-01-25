@@ -1,4 +1,4 @@
 package main.Parts;
 
-public class LimoDoor extends ADoor {
+public final class LimoDoor extends ADoor {
 }

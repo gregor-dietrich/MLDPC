@@ -8,7 +8,7 @@ public abstract class AComposite implements IValuable {
     private final ArrayList<IValuable> components;
 
     public AComposite() {
-        this.components = new ArrayList<>();
+        this(new ArrayList<>());
     }
 
     public AComposite(final ArrayList<IValuable> pieces) {
@@ -18,7 +18,7 @@ public abstract class AComposite implements IValuable {
     @Override
     public double getPrice() {
         double price = 0;
-        for (var piece : components)
+        for (final var piece : components)
             price += piece.getPrice();
         return price;
     }

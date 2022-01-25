@@ -1,4 +1,4 @@
 package main.Pizzeria.Pizza.Dough;
 
-public class ThinCrustDough extends ADough {
+public final class ThinCrustDough extends ADough {
 }

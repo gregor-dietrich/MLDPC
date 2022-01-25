@@ -7,7 +7,7 @@ public final class StripDecorator extends ADecorator {
 
     @Override
     public String toString() {
-        var ret = super.toString();
+        final var ret = super.toString();
         return ret.replaceAll("\\s+", " ").replaceAll("\\s+(?=\\p{Punct})", "");
     }
 }

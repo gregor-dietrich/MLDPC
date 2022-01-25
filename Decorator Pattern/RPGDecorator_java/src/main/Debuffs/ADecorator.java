@@ -26,10 +26,7 @@ public abstract class ADecorator extends ACharacter {
 
     @Override
     public int getVitality() {
-        if (this.getPObj() != null)
-            return this.getPObj().getVitality();
-        else
-            return -1;
+        return this.getPObj() != null ? this.getPObj().getVitality() : -1;
     }
 
     @Override
@@ -40,10 +37,7 @@ public abstract class ADecorator extends ACharacter {
 
     @Override
     public int getStrength() {
-        if (this.getPObj() != null)
-            return this.getPObj().getStrength();
-        else
-            return -1;
+        return this.getPObj() != null ? this.getPObj().getStrength() : -1;
     }
 
     @Override
@@ -54,10 +48,7 @@ public abstract class ADecorator extends ACharacter {
 
     @Override
     public int getEndurance() {
-        if (this.getPObj() != null)
-            return this.getPObj().getEndurance();
-        else
-            return -1;
+        return this.getPObj() != null ? this.getPObj().getEndurance() : -1;
     }
 
     @Override
@@ -68,10 +59,7 @@ public abstract class ADecorator extends ACharacter {
 
     @Override
     public int getIntelligence() {
-        if (this.getPObj() != null)
-            return this.getPObj().getIntelligence();
-        else
-            return -1;
+        return this.getPObj() != null ? this.getPObj().getIntelligence() : -1;
     }
 
     @Override
@@ -82,9 +70,6 @@ public abstract class ADecorator extends ACharacter {
 
     @Override
     public int getMaxMoveDistance() {
-        if (this.getPObj() != null)
-            return this.getPObj().getMaxMoveDistance();
-        else
-            return -1;
+        return this.getPObj() != null ? this.getPObj().getMaxMoveDistance() : -1;
     }
 }

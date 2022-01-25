@@ -1,6 +1,6 @@
 package main.Actors;
 
-public class ActorType2 extends AActor {
+public final class ActorType2 extends AActor {
 
     @Override
     public void doSomething() {

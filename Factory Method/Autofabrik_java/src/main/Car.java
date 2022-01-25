@@ -5,7 +5,7 @@ import main.Parts.AHood;
 import main.Parts.ALid;
 import main.Parts.AWing;
 
-public class Car {
+public final class Car {
     private ADoor door;
     private AHood hood;
     private ALid lid;

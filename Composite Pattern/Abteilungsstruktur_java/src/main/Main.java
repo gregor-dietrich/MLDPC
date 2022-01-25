@@ -9,10 +9,11 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        // Variant 1+2
+        // required for Variants 1 & 2
         final ArrayList<IPerson> departmentHeads = new ArrayList<>();
         for (int i = 0; i < 3; i++) {
             final var manager = new Manager();
+            manager.setName("Manager #" + (i + 1));
             for (int j = 0; j < (i + 2); j++)
                 manager.addSubordinate(new Subordinate());
             departmentHeads.add(manager);
@@ -23,7 +24,7 @@ public class Main {
 
         /* Variant 2
         final var ceo = new Manager();
-        for (var dh : departmentHeads)
+        for (final var dh : departmentHeads)
             ceo.addSubordinate(dh);
         */
 
@@ -31,11 +32,14 @@ public class Main {
         final var ceo = new Manager();
         for (int i = 0; i < 3; i++) {
             final var manager = new Manager();
+            manager.setName("Manager #" + (i + 1));
             for (int j = 0; j < (i + 2); j++)
                 manager.addSubordinate(new Subordinate());
             ceo.addSubordinate(manager);
         }
         */
+
+        ceo.setName("CEO");
 
         // Output (implicit call -> ceo.toString())
         System.out.print(ceo);

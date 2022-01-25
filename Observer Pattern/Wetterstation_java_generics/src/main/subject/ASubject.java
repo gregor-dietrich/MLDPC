@@ -11,16 +11,16 @@ public abstract class ASubject<T> {
         this.observerList = new ArrayList<>();
     }
 
-    public final void addObserver(IObserver<T> ob) {
+    public final void addObserver(final IObserver<T> ob) {
         observerList.add(ob);
     }
 
-    public final void deleteObserver(IObserver<T> ob) {
+    public final void deleteObserver(final IObserver<T> ob) {
         observerList.remove(ob);
     }
 
     protected final void notifyObservers() {
-        for (var ob : observerList)
+        for (final var ob : observerList)
             ob.update(getType());
     }
 

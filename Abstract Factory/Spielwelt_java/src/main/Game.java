@@ -1,8 +1,5 @@
 package main;
 
-import main.Fauna.AFauna;
-import main.Floor.AFloor;
-import main.Flora.AFlora;
 import main.World.AWorldFactory;
 import main.World.World;
 
@@ -16,20 +13,21 @@ public final class Game {
     }
 
     public void createWorld() {
-        AFauna fauna = this.getFactory().createFauna();
-        AFloor floor = this.getFactory().createFloor();
-        AFlora flora = this.getFactory().createFlora();
+        final var fauna = this.getFactory().createFauna();
+        final var floor = this.getFactory().createFloor();
+        final var flora = this.getFactory().createFlora();
+
         this.setWorld(new World(fauna, floor, flora));
     }
 
     public void display() {
-        String fauna = this.getWorld().getFauna().getClass().getName();
-        String floor = this.getWorld().getFloor().getClass().getName();
-        String flora = this.getWorld().getFlora().getClass().getName();
+        final var faunaName = this.getWorld().getFauna().getClass().getName();
+        final var floorName = this.getWorld().getFloor().getClass().getName();
+        final var floraName = this.getWorld().getFlora().getClass().getName();
 
-        System.out.println("Fauna: " + fauna);
-        System.out.println("Floor: " + floor);
-        System.out.println("Flora: " + flora);
+        System.out.println("Fauna: " + faunaName);
+        System.out.println("Floor: " + floorName);
+        System.out.println("Flora: " + floraName);
     }
 
     public World getWorld() {

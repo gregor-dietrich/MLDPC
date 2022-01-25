@@ -11,14 +11,14 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         // Implementierte Klassen instanziieren
-        final ArrayList<ASpielfigur> figuren = new ArrayList<>();
+        final var figuren = new ArrayList<ASpielfigur>();
         figuren.add(new Koenig(new Schwertschwingen()));
         figuren.add(new Koenigin(new Messerstechen()));
         figuren.add(new Ritter(new Bogenschiessen()));
         figuren.add(new Troll(new Axtschlagen()));
 
         // Verhalten testen
-        for (var figur : figuren) {
+        for (final var figur : figuren) {
             figur.anzeigen();
             figur.kaempfen(1);
         }

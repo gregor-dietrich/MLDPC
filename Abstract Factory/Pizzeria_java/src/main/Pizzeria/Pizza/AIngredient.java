@@ -15,7 +15,7 @@ public class AIngredient {
         return className;
     }
 
-    private void setName(String className) {
+    private void setName(final String className) {
         this.className = className;
     }
 }

@@ -59,7 +59,7 @@ public abstract class APizza {
 
     public String getPizzaName() {
         if (this.getClassName() == null) {
-            var name = this.getClass().getName().split("\\.");
+            final var name = this.getClass().getName().split("\\.");
             this.setClassName(name[name.length - 1]);
         }
         return this.getClassName();

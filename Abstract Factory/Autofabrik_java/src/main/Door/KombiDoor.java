@@ -1,4 +1,4 @@
 package main.Door;
 
-public class KombiDoor extends ADoor {
+public final class KombiDoor extends ADoor {
 }

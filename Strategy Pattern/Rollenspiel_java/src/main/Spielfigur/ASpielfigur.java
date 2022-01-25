@@ -23,15 +23,14 @@ public abstract class ASpielfigur {
     }
 
     public final void setWaffe(final IWaffenverhalten wv) {
-        if (wv != null) {
+        if (wv != null)
             this.waffe = wv;
-        } else {
+        else
             throw new IllegalStateException();
-        }
     }
 
     private String getClassName() {
-        var name = this.getClass().getName().split("\\.");
+        final var name = this.getClass().getName().split("\\.");
         return name[name.length - 1];
     }
 }

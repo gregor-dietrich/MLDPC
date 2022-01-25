@@ -22,7 +22,7 @@ public class Main {
     }
 
     private static String getClassName(final Object obj) {
-        var name = obj.getClass().getName().split("\\.");
+        final var name = obj.getClass().getName().split("\\.");
         return name[name.length - 1];
     }
 

@@ -5,7 +5,7 @@ import main.Pizzeria.Pizza.Cheese.PlasticCheese;
 import main.Pizzeria.Pizza.Dough.ADough;
 import main.Pizzeria.Pizza.Dough.ThickCrustDough;
 
-public class AmericanIngredientFactory extends AIngredientFactory {
+public final class AmericanIngredientFactory extends AIngredientFactory {
     @Override
     public ACheese createCheese() {
         return new PlasticCheese();

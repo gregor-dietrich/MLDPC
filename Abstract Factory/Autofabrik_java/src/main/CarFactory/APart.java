@@ -2,13 +2,13 @@ package main.CarFactory;
 
 public abstract class APart {
     private ACarFactory.carColor color;
-    private boolean rostschutz = false;
+    private boolean antiRust = false;
 
-    public final void applyRostschutz() {
-        this.setRostschutz(true);
+    public final void applyAntiRust() {
+        this.setAntiRust(true);
     }
 
-    public final void applyLackierung(ACarFactory.carColor color) {
+    public final void applyPaint(final ACarFactory.carColor color) {
         this.setColor(color);
     }
 
@@ -16,15 +16,15 @@ public abstract class APart {
         return color;
     }
 
-    private final void setColor(ACarFactory.carColor color) {
+    private void setColor(final ACarFactory.carColor color) {
         this.color = color;
     }
 
-    public final boolean getRostschutz() {
-        return rostschutz;
+    public final boolean getAntiRust() {
+        return antiRust;
     }
 
-    public final void setRostschutz(boolean rostschutz) {
-        this.rostschutz = rostschutz;
+    private void setAntiRust(final boolean antiRust) {
+        this.antiRust = antiRust;
     }
 }

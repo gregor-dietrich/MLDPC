@@ -4,7 +4,7 @@ import main.Ressourcen.Components.Beam;
 import main.Ressourcen.Components.Board;
 import main.Ressourcen.Components.Screw;
 
-public final class Table extends AComposite {
+public final class Table extends AComplexComposite {
     public Table() {
         this.addComponent(new Board());
         for (int i = 0; i < 4; i++)
@@ -14,8 +14,7 @@ public final class Table extends AComposite {
     }
 
     @Override
-    public double getPrice() {
-        var material = super.getPrice();
-        return material + material * 5;
+    protected double getPersonnelCost() {
+        return this.getMaterialCost() * 5;
     }
 }

@@ -9,11 +9,11 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        ArrayList<APizzeria> pizzerien = new ArrayList<>();
+        final var pizzerien = new ArrayList<>();
         pizzerien.add(new PizzeriaItalia());
         pizzerien.add(new PizzeriaAmerika());
 
-        for (var pizzeria : pizzerien) {
+        for (final var pizzeria : pizzerien) {
             pizzeria.orderPizza(APizzeria.pizzaType.FUNGHI);
             pizzeria.orderPizza(APizzeria.pizzaType.HAWAII);
             pizzeria.orderPizza(APizzeria.pizzaType.MARGHERITA);

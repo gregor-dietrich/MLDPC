@@ -1,4 +1,4 @@
 package main.Pizzeria.Pizza.Toppings;
 
-public class Pineapple extends ATopping {
+public final class Pineapple extends ATopping {
 }

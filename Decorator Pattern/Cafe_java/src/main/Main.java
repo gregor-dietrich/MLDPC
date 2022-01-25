@@ -9,14 +9,14 @@ import main.Ingredients.Sugar;
 public class Main {
 
     public static void main(String[] args) {
-        var justCoffee = new ProprietaryBlend();
-        var withMilk = new Milk(new EspressoBlend());
-        var andSugar = new Sugar(new Milk(new DecaffeinatedBlend()));
-        System.out.println(justCoffee);
-        System.out.println(justCoffee.getPrice());
-        System.out.println(withMilk);
-        System.out.println(withMilk.getPrice());
-        System.out.println(andSugar);
-        System.out.println(andSugar.getPrice());
+        final var justPlainCoffee = new ProprietaryBlend();
+        final var espressoWithMilk = new Milk(new EspressoBlend());
+        final var decafWithMilkAndSugar = new Sugar(new Milk(new DecaffeinatedBlend()));
+        System.out.println(justPlainCoffee);
+        System.out.println(justPlainCoffee.getPrice());
+        System.out.println(espressoWithMilk);
+        System.out.println(espressoWithMilk.getPrice());
+        System.out.println(decafWithMilkAndSugar);
+        System.out.println(decafWithMilkAndSugar.getPrice());
     }
 }

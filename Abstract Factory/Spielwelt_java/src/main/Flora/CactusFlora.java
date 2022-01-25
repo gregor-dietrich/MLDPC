@@ -1,4 +1,4 @@
 package main.Flora;
 
-public class CactusFlora extends AFlora {
+public final class CactusFlora extends AFlora {
 }

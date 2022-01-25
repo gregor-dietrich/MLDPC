@@ -9,9 +9,13 @@ public abstract class ADecorator extends AComponent {
 
     @Override
     public final double getPrice() {
+        return this.getPObj() != null ? super.getPrice() + this.getPObj().getPrice() : super.getPrice();
+        /* line above is equivalent to:
         if (this.getPObj() != null)
             return super.getPrice() + this.getPObj().getPrice();
+        // else can be omitted because return (line above) will terminate the method call
         return super.getPrice();
+        */
     }
 
     @Override

@@ -12,33 +12,33 @@ import main.Wing.KombiWing;
 public final class KombiCarFactory extends ACarFactory {
     @Override
     public ADoor createDoor(final carColor color) {
-        var p = new KombiDoor();
-        this.applyRostschutz(p);
-        this.applyLackierung(p, color);
+        final var p = new KombiDoor();
+        this.applyAntiRust(p);
+        this.applyPaint(p, color);
         return p;
     }
 
     @Override
     public AHood createHood(final carColor color) {
-        var p = new KombiHood();
-        this.applyRostschutz(p);
-        this.applyLackierung(p, color);
+        final var p = new KombiHood();
+        this.applyAntiRust(p);
+        this.applyPaint(p, color);
         return p;
     }
 
     @Override
     public ALid createLid(final carColor color) {
-        var p = new KombiLid();
-        this.applyRostschutz(p);
-        this.applyLackierung(p, color);
+        final var p = new KombiLid();
+        this.applyAntiRust(p);
+        this.applyPaint(p, color);
         return p;
     }
 
     @Override
     public AWing createWing(final carColor color) {
-        var p = new KombiWing();
-        this.applyRostschutz(p);
-        this.applyLackierung(p, color);
+        final var p = new KombiWing();
+        this.applyAntiRust(p);
+        this.applyPaint(p, color);
         return p;
     }
 }

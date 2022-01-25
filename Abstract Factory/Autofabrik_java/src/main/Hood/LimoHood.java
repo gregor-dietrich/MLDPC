@@ -1,4 +1,4 @@
 package main.Hood;
 
-public class LimoHood extends AHood {
+public final class LimoHood extends AHood {
 }

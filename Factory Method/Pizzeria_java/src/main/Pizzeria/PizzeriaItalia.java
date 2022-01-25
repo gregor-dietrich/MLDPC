@@ -6,16 +6,13 @@ import main.Pizzeria.Pizza.Italian.*;
 public final class PizzeriaItalia extends APizzeria {
     @Override
     protected APizza createPizza(final pizzaType type) {
-        APizza pizza = switch (type) {
+        final var pizza = switch (type) {
             case FUNGHI -> new ItalianFunghi();
             case HAWAII -> new ItalianHawaii();
             case MARGHERITA -> new ItalianMargherita();
             case SALAMI -> new ItalianSalami();
             case TONNO -> new ItalianTonno();
         };
-        pizza.prepare();
-        pizza.bake();
-        pizza.cut();
         return pizza;
     }
 }

@@ -3,7 +3,7 @@ package main.Ingredients;
 import main.AComponent;
 import main.ADecorator;
 
-public class Milk extends ADecorator {
+public final class Milk extends ADecorator {
     public Milk(final AComponent pObj) {
         super(pObj);
         this.setPrice(0.59);

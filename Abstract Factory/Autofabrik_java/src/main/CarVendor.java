@@ -18,10 +18,10 @@ public final class CarVendor {
 
     public void orderCar(final carType t, final ACarFactory.carColor color) {
         System.out.println("Car has been ordered...");
-        var door = factories.get(t.ordinal()).createDoor(color);
-        var hood = factories.get(t.ordinal()).createHood(color);
-        var lid = factories.get(t.ordinal()).createLid(color);
-        var wing = factories.get(t.ordinal()).createWing(color);
+        final var door = factories.get(t.ordinal()).createDoor(color);
+        final var hood = factories.get(t.ordinal()).createHood(color);
+        final var lid = factories.get(t.ordinal()).createLid(color);
+        final var wing = factories.get(t.ordinal()).createWing(color);
         System.out.println("Parts have been built...");
         this.cars.add(new Car(door, hood, lid, wing));
         System.out.println("Car has been assembled.");
@@ -29,7 +29,7 @@ public final class CarVendor {
     }
 
     public Car sellCar(final int index) {
-        var car = this.cars.get(index);
+        final var car = this.cars.get(index);
         this.cars.remove(index);
         System.out.println("Car has been sold: " + car);
         System.out.println();
@@ -38,7 +38,7 @@ public final class CarVendor {
 
     public void showCars() {
         System.out.println("Vendor has " + cars.size() + " car(s) in stock.");
-        for (var car : this.cars) {
+        for (final var car : this.cars) {
             System.out.println("Vendor Car #" + (cars.indexOf(car) + 1) + ": " + car);
             car.display();
         }

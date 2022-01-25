@@ -1,4 +1,4 @@
 package main.Fauna;
 
-public class CamelFauna extends AFauna {
+public final class CamelFauna extends AFauna {
 }

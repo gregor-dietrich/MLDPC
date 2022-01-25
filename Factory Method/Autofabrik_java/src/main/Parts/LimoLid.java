@@ -1,4 +1,4 @@
 package main.Parts;
 
-public class LimoLid extends ALid {
+public final class LimoLid extends ALid {
 }

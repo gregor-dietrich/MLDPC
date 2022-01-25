@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Main {
 
     public static void main(String[] args) {
-        // Variant 1+2
+        // required for Variants 1 & 2
         final ArrayList<ILego> components = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             final var rngComposition = new LegoComposition();
@@ -23,7 +23,7 @@ public class Main {
 
         /* Variant 2
         final var legoDeathStar = new LegoComposition();
-        for (var component : components)
+        for (final var component : components)
             legoDeathStar.addPiece(component);
         */
 

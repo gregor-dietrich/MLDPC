@@ -1,4 +1,4 @@
 package main.Parts;
 
-public class LimoWing extends AWing {
+public final class LimoWing extends AWing {
 }

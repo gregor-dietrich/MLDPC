@@ -12,33 +12,33 @@ import main.Wing.LimoWing;
 public final class LimoCarFactory extends ACarFactory {
     @Override
     public ADoor createDoor(final carColor color) {
-        var p = new LimoDoor();
-        this.applyRostschutz(p);
-        this.applyLackierung(p, color);
+        final var p = new LimoDoor();
+        this.applyAntiRust(p);
+        this.applyPaint(p, color);
         return p;
     }
 
     @Override
     public AHood createHood(final carColor color) {
-        var p = new LimoHood();
-        this.applyRostschutz(p);
-        this.applyLackierung(p, color);
+        final var p = new LimoHood();
+        this.applyAntiRust(p);
+        this.applyPaint(p, color);
         return p;
     }
 
     @Override
     public ALid createLid(final carColor color) {
-        var p = new LimoLid();
-        this.applyRostschutz(p);
-        this.applyLackierung(p, color);
+        final var p = new LimoLid();
+        this.applyAntiRust(p);
+        this.applyPaint(p, color);
         return p;
     }
 
     @Override
     public AWing createWing(final carColor color) {
-        var p = new LimoWing();
-        this.applyRostschutz(p);
-        this.applyLackierung(p, color);
+        final var p = new LimoWing();
+        this.applyAntiRust(p);
+        this.applyPaint(p, color);
         return p;
     }
 }

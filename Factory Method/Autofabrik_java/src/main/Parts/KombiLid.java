@@ -1,4 +1,4 @@
 package main.Parts;
 
-public class KombiLid extends ALid {
+public final class KombiLid extends ALid {
 }

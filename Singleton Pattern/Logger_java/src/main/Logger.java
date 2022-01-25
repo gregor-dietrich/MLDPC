@@ -1,7 +1,5 @@
 package main;
 
-import org.jetbrains.annotations.Nullable;
-
 import java.util.ArrayList;
 
 public final class Logger {
@@ -28,14 +26,8 @@ public final class Logger {
         System.out.println("Logged messages: " + this.getMessageCount());
     }
 
-    public @Nullable
-    Message getMessage(final int index) {
-        @Nullable Message result;
-        if (index < this.getMessageCount())
-            result = this.messages.get(index);
-        else
-            result = null;
-        return result;
+    public Message getMessage(final int index) {
+        return index < this.getMessageCount() ? this.messages.get(index) : null;
     }
 
     public boolean deleteMessage(final int index) {

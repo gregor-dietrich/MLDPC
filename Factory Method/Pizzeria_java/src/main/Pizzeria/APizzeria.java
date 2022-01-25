@@ -9,7 +9,10 @@ public abstract class APizzeria {
 
     public final APizza orderPizza(final pizzaType type) {
         System.out.println("Ordering " + type + " from " + this.getPizzeriaName());
-        APizza pizza = this.createPizza(type);
+        final var pizza = this.createPizza(type);
+        pizza.prepare();
+        pizza.bake();
+        pizza.cut();
         System.out.println(pizza.getPizzaName() + " has been finished!");
         System.out.println();
         return pizza;
@@ -17,7 +20,7 @@ public abstract class APizzeria {
 
     public final String getPizzeriaName() {
         if (this.getClassName() == null) {
-            var name = this.getClass().getName().split("\\.");
+            final var name = this.getClass().getName().split("\\.");
             this.setClassName(name[name.length - 1]);
         }
         return this.getClassName();

@@ -18,6 +18,9 @@ auto APizzeria::order_pizza(const pizza_type& type) -> APizza*
 {
 	std::cout << "Ordered item #" << (static_cast<int>(type) + 1) << " from " << this->get_class_name() << "\n";
 	const auto pizza = this->create_pizza(type);
+	pizza->prepare();
+	pizza->bake();
+	pizza->cut();
 	this->pizzen_.push_back(pizza);
 	std::cout << pizza->get_class_name() << " has been finished!\n\n";
 	return pizza;
@@ -44,9 +47,6 @@ auto PizzeriaAmerika::create_pizza(const pizza_type& type) -> APizza*
 		pizza = new AmericanTonno();
 		break;
 	}
-	pizza->prepare();
-	pizza->bake();
-	pizza->cut();
 	return pizza;
 }
 
@@ -71,8 +71,5 @@ auto PizzeriaItalia::create_pizza(const pizza_type& type) -> APizza*
 		pizza = new ItalianTonno();
 		break;
 	}
-	pizza->prepare();
-	pizza->bake();
-	pizza->cut();
 	return pizza;
 }

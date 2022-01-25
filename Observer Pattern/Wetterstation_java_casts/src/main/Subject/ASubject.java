@@ -23,7 +23,7 @@ public abstract class ASubject {
     protected final void notifyObservers() {
         if (!changedFlag)
             return;
-        for (var ob : observerList)
+        for (final var ob : observerList)
             ob.update(this);
         this.setChanged(false);
     }

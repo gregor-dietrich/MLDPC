@@ -1,4 +1,4 @@
 package main.Pizzeria.Pizza.Cheese;
 
-public class PlasticCheese extends ACheese {
+public final class PlasticCheese extends ACheese {
 }

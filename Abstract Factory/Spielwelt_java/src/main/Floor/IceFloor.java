@@ -1,4 +1,4 @@
 package main.Floor;
 
-public class IceFloor extends AFloor {
+public final class IceFloor extends AFloor {
 }

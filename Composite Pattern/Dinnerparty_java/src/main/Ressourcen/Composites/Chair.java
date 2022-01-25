@@ -4,7 +4,7 @@ import main.Ressourcen.Components.Beam;
 import main.Ressourcen.Components.Board;
 import main.Ressourcen.Components.Screw;
 
-public final class Chair extends AComposite {
+public final class Chair extends AComplexComposite {
     public Chair() {
         for (int i = 0; i < 4; i++)
             this.addComponent(new Beam());
@@ -15,8 +15,7 @@ public final class Chair extends AComposite {
     }
 
     @Override
-    public double getPrice() {
-        var material = super.getPrice();
-        return material + material * 12;
+    protected double getPersonnelCost() {
+        return this.getMaterialCost() * 12;
     }
 }

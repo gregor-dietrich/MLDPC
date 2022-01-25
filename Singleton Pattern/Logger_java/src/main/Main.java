@@ -8,12 +8,12 @@ import java.util.ArrayList;
 
 public class Main {
 
-    public static void main(String[] args) throws InterruptedException {
-        final ArrayList<AActor> actors = new ArrayList<>();
+    public static void main(String[] args) {
+        final var actors = new ArrayList<AActor>();
         actors.add(new ActorType1());
         actors.add(new ActorType2());
 
-        for (var actor : actors)
+        for (final var actor : actors)
             actor.doSomething();
 
         final var logger = Logger.getInstance();

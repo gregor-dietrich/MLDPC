@@ -1,4 +1,4 @@
 package main.Pizzeria.Pizza.Toppings;
 
-public class Mushrooms extends ATopping {
+public final class Mushrooms extends ATopping {
 }

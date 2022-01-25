@@ -19,10 +19,14 @@ public final class Car {
     }
 
     public void display() {
-        System.out.println("Door: " + this.getDoor().getClass().getName() + " (" + this.getDoor().getColor() + ")");
-        System.out.println("Hood: " + this.getHood().getClass().getName() + " (" + this.getHood().getColor() + ")");
-        System.out.println("Lid: " + this.getLid().getClass().getName() + " (" + this.getLid().getColor() + ")");
-        System.out.println("Wing: " + this.getWing().getClass().getName() + " (" + this.getWing().getColor() + ")");
+        System.out.println("Door: " + this.getDoor().getClass().getName() + " (Color: " + this.getDoor().getColor()
+                + ", Anti-Rust: " + this.getDoor().getAntiRust() + ")");
+        System.out.println("Hood: " + this.getHood().getClass().getName() + " (Color: " + this.getHood().getColor()
+                + ", Anti-Rust: " + this.getHood().getAntiRust() + ")");
+        System.out.println("Lid:  " + this.getLid().getClass().getName() + "   (Color: " + this.getLid().getColor()
+                + ", Anti-Rust: " + this.getLid().getAntiRust() + ")");
+        System.out.println("Wing: " + this.getWing().getClass().getName() + " (Color: " + this.getWing().getColor()
+                + ", Anti-Rust: " + this.getWing().getAntiRust() + ")");
         System.out.println();
     }
 

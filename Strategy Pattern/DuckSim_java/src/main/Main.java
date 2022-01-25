@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         // Implementierte Klassen instanziieren
-        final ArrayList<AEnte> enten = new ArrayList<>();
+        final var enten = new ArrayList<AEnte>();
         enten.add(new Stockente(new Fluegelschlagen(), new Quaken()));
         enten.add(new Moorente(new Gleiten(), new Quaken()));
         enten.add(new Gummiente(new NichtFliegen(), new Quietschen()));
@@ -22,7 +22,7 @@ public class Main {
         enten.add(new Mechaente(new Duesenantriebsfliegen(), new Still()));
 
         // Verhalten testen
-        for (var ente : enten) {
+        for (final var ente : enten) {
             ente.anzeigen();
             ente.schwimmen();
             ente.fliegenAusfuehren();

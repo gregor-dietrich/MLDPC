@@ -14,12 +14,12 @@ public abstract class ACarFactory {
 
     public abstract AWing createWing(final carColor color);
 
-    protected void applyRostschutz(final APart p) {
-        p.applyRostschutz();
+    protected void applyAntiRust(final APart p) {
+        p.applyAntiRust();
     }
 
-    protected void applyLackierung(final APart p, final carColor color) {
-        p.applyLackierung(color);
+    protected void applyPaint(final APart p, final carColor color) {
+        p.applyPaint(color);
     }
 
     public enum carColor {BLACK, BLUE, GREEN, ORANGE, PURPLE, RED, WHITE, YELLOW}

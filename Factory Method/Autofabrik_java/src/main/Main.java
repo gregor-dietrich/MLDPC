@@ -7,9 +7,9 @@ public class Main {
         final var limoFactory = new CarFactory(CarFactory.carType.LIMO);
 
         // Einen blauen Kombi bauen
-        final Car blueKombi = kombiFactory.orderCar(CarFactory.carColor.BLUE);
+        final var blueKombi = kombiFactory.orderCar(CarFactory.carColor.BLUE);
 
         // Eine rote Limousine bauen
-        final Car redLimo = limoFactory.orderCar(CarFactory.carColor.RED);
+        final var redLimo = limoFactory.orderCar(CarFactory.carColor.RED);
     }
 }

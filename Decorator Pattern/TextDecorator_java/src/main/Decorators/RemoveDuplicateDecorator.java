@@ -16,10 +16,10 @@ public final class RemoveDuplicateDecorator extends ADecorator {
 
     @Override
     public String toString() {
-        var str = Arrays.stream(super.toString().split(" ")).toList();
-        var ret = new StringBuilder();
+        final var str = Arrays.stream(super.toString().split(" ")).toList();
+        final var ret = new StringBuilder();
         for (final var word : str) {
-            var retSplit = Arrays.stream(ret.toString().split(" ")).toList();
+            final var retSplit = Arrays.stream(ret.toString().split(" ")).toList();
             if (!Objects.equals(retSplit.get(retSplit.size() - 1), word)) {
                 if (!Objects.equals(retSplit.get(retSplit.size() - 1), word))
                     ret.append(word);

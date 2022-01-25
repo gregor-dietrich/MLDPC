@@ -7,7 +7,7 @@ public final class Message {
     private String text = "";
     private Date timestamp;
 
-    public Message(String text) {
+    public Message(final String text) {
         this.setText(text);
         this.setTimestamp(Calendar.getInstance().getTime());
     }
@@ -16,7 +16,7 @@ public final class Message {
         return text;
     }
 
-    private void setText(String text) {
+    private void setText(final String text) {
         this.text = text;
     }
 
@@ -24,7 +24,7 @@ public final class Message {
         return timestamp;
     }
 
-    private void setTimestamp(Date timestamp) {
+    private void setTimestamp(final Date timestamp) {
         this.timestamp = timestamp;
     }
 }
