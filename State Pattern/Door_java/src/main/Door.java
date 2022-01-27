@@ -2,8 +2,6 @@ package main;
 
 import main.DoorState.*;
 
-import java.util.Objects;
-
 public final class Door {
     private IDoorState currentState;
 
