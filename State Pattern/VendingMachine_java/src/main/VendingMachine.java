@@ -9,11 +9,13 @@ public final class VendingMachine {
 
     public VendingMachine() {
         this.setStock(0);
-        this.currentState = new MachineEmptyState(this);
+        this.currentState = new MachineEmptyState();
     }
 
     public void restock() {
         System.out.println("Attempting to restock...");
+        if (this.getStock() <= 0 && this.currentState instanceof MachineEmptyState)
+            this.setStock(100);
         this.currentState = currentState.restock();
     }
 
@@ -29,15 +31,17 @@ public final class VendingMachine {
 
     public void orderProduct() {
         System.out.println("Attempting to order product ...");
-        this.currentState = currentState.orderProduct();
+        if (this.getStock() > 0)
+            this.setStock(this.getStock() - 1);
+        this.currentState = this.getStock() > 0 ? currentState.orderProduct() : new MachineEmptyState();
     }
 
     public int getStock() {
         return stock;
     }
 
-    public void setStock(int stock) {
-        this.stock = stock;
+    private void setStock(final int stock) {
+        this.stock = Math.max(stock, 0);
     }
 
     public AVendingMachineState getCurrentState() {

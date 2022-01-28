@@ -4,7 +4,7 @@ import main.VendingMachineStates.MachineEmptyState;
 import main.VendingMachineStates.WaitingForCoinState;
 import main.VendingMachineStates.WaitingForOrderState;
 
-public class Main {
+public class StateMachineTest {
 
     public static void main(String[] args) {
         final var vendingMachine = new VendingMachine();

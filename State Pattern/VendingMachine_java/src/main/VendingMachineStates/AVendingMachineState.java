@@ -1,20 +1,13 @@
 package main.VendingMachineStates;
 
 import main.Coin;
-import main.VendingMachine;
 
-public abstract class AVendingMachineState {
-    protected VendingMachine vendingMachine;
+public interface AVendingMachineState {
+    AVendingMachineState restock();
 
-    public AVendingMachineState(final VendingMachine vendingMachine) {
-        this.vendingMachine = vendingMachine;
-    }
+    AVendingMachineState insertCoin(final Coin coin);
 
-    public abstract AVendingMachineState restock();
+    AVendingMachineState returnCoin();
 
-    public abstract AVendingMachineState insertCoin(final Coin coin);
-
-    public abstract AVendingMachineState returnCoin();
-
-    public abstract AVendingMachineState orderProduct();
+    AVendingMachineState orderProduct();
 }

@@ -3,11 +3,7 @@ package main.VendingMachineStates;
 import main.Coin;
 import main.VendingMachine;
 
-public class WaitingForCoinState extends AVendingMachineState {
-    public WaitingForCoinState(final VendingMachine vendingMachine) {
-        super(vendingMachine);
-    }
-
+public class WaitingForCoinState implements AVendingMachineState {
     @Override
     public AVendingMachineState restock() {
         System.out.println("Nothing happened.");
@@ -17,7 +13,7 @@ public class WaitingForCoinState extends AVendingMachineState {
     @Override
     public AVendingMachineState insertCoin(final Coin coin) {
         System.out.println("Coin inserted.");
-        return new WaitingForOrderState(this.vendingMachine);
+        return new WaitingForOrderState();
     }
 
     @Override
