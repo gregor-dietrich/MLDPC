@@ -8,22 +8,26 @@ public class WaitingForOrderState extends AVendingMachineState {
     }
 
     @Override
-    public AVendingMachineState fillInventory() {
+    public AVendingMachineState restock() {
+        System.out.println("Nothing happened.");
         return this;
     }
 
     @Override
     public AVendingMachineState insertCoin() {
+        System.out.println("Nothing happened.");
         return this;
     }
 
     @Override
     public AVendingMachineState returnCoin() {
+        System.out.println("Coin returned.");
         return new WaitingForCoinState(this.vendingMachine);
     }
 
     @Override
     public AVendingMachineState orderProduct() {
+        System.out.println("Product ordered.");
         this.vendingMachine.setStock(this.vendingMachine.getStock() - 1);
         return this.vendingMachine.getStock() > 0 ?
                 new WaitingForCoinState(this.vendingMachine) : new MachineEmptyState(this.vendingMachine);

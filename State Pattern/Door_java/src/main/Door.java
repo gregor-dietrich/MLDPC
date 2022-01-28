@@ -2,11 +2,13 @@ package main;
 
 import main.DoorState.*;
 
+import java.util.Objects;
+
 public final class Door {
     private IDoorState currentState;
 
     public Door() {
-        this(new DoorClosedUnlocked());
+        this(new DoorClosedUnlockedState());
     }
 
     public Door(final IDoorState defaultState) {
@@ -14,40 +16,34 @@ public final class Door {
     }
 
     public boolean open() {
+        final var oldState = this.currentState;
         this.currentState = currentState.open();
-        final var result = checkCurrentState("Open");
-        System.out.println(result ? "Door is open" : "Failed to open");
+        final var result = !Objects.equals(this.currentState, oldState);
+        System.out.println(result ? "Door opened" : "Nothing happened");
         return result;
     }
 
     public boolean close() {
+        final var oldState = this.currentState;
         this.currentState = currentState.close();
-        final var result = checkCurrentState("Closed");
-        System.out.println(result ? "Door is closed" : "Failed to close");
+        final var result = !Objects.equals(this.currentState, oldState);
+        System.out.println(result ? "Door closed" : "Nothing happened");
         return result;
     }
 
     public boolean lock(final Key key) {
+        final var oldState = this.currentState;
         this.currentState = currentState.lock(key);
-        final var result = checkCurrentState("Locked");
-        System.out.println(result ? "Door is locked" : "Failed to lock");
+        final var result = !Objects.equals(this.currentState, oldState);
+        System.out.println(result ? "Door locked" : "Nothing happened");
         return result;
     }
 
     public boolean unlock(final Key key) {
+        final var oldState = this.currentState;
         this.currentState = currentState.unlock(key);
-        final var result = checkCurrentState("Unlocked");
-        System.out.println(result ? "Door is unlocked" : "Failed to unlock");
+        final var result = !Objects.equals(this.currentState, oldState);
+        System.out.println(result ? "Door unlocked" : "Nothing happened");
         return result;
-    }
-
-    private boolean checkCurrentState(final String desiredState) {
-        return switch (desiredState) {
-            case "Open" -> currentState instanceof DoorOpenUnlocked || currentState instanceof DoorOpenLocked;
-            case "Closed" -> currentState instanceof DoorClosedUnlocked || currentState instanceof DoorClosedLocked;
-            case "Locked" -> currentState instanceof DoorOpenLocked || currentState instanceof DoorClosedLocked;
-            case "Unlocked" -> currentState instanceof DoorOpenUnlocked || currentState instanceof DoorClosedUnlocked;
-            default -> throw new IllegalStateException("Unexpected value: " + desiredState);
-        };
     }
 }

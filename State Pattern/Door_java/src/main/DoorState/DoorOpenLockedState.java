@@ -2,7 +2,7 @@ package main.DoorState;
 
 import main.Key;
 
-public final class DoorOpenLocked implements IDoorState {
+public final class DoorOpenLockedState implements IDoorState {
     @Override
     public IDoorState open() {
         return this;
@@ -20,6 +20,6 @@ public final class DoorOpenLocked implements IDoorState {
 
     @Override
     public IDoorState unlock(Key key) {
-        return new DoorOpenUnlocked();
+        return new DoorOpenUnlockedState();
     }
 }

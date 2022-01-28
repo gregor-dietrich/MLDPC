@@ -8,22 +8,27 @@ public class MachineEmptyState extends AVendingMachineState {
     }
 
     @Override
-    public AVendingMachineState fillInventory() {
+    public AVendingMachineState restock() {
+        System.out.println("Restocked machine.");
+        this.vendingMachine.setStock(100);
         return new WaitingForCoinState(this.vendingMachine);
     }
 
     @Override
     public AVendingMachineState insertCoin() {
+        System.out.println("Nothing happened.");
         return this;
     }
 
     @Override
     public AVendingMachineState returnCoin() {
+        System.out.println("Nothing happened.");
         return this;
     }
 
     @Override
     public AVendingMachineState orderProduct() {
+        System.out.println("Nothing happened.");
         return this;
     }
 }

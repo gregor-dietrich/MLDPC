@@ -9,7 +9,7 @@ public abstract class AVendingMachineState {
         this.vendingMachine = vendingMachine;
     }
 
-    public abstract AVendingMachineState fillInventory();
+    public abstract AVendingMachineState restock();
 
     public abstract AVendingMachineState insertCoin();
 
