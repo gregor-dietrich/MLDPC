@@ -2,7 +2,7 @@ package main;
 
 import main.DoorState.*;
 
-public class Main {
+public class StateMachineTest {
     public static void main(String[] args) {
         final var door = new Door();
         final var key = new Key();

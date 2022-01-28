@@ -1,7 +1,6 @@
 package main.VendingMachineStates;
 
 import main.Coin;
-import main.VendingMachine;
 
 public class WaitingForOrderState implements AVendingMachineState {
     @Override

@@ -40,7 +40,7 @@ public class StateMachineTest {
             vendingMachine.orderProduct();
             // WaitingForCoinState || MachineEmptyState
             if (!(vendingMachine.getCurrentState() instanceof WaitingForCoinState)
-            && !(vendingMachine.getCurrentState() instanceof MachineEmptyState)) throw new AssertionError();
+                    && !(vendingMachine.getCurrentState() instanceof MachineEmptyState)) throw new AssertionError();
         }
         // MachineEmptyState
         if (!(vendingMachine.getCurrentState() instanceof MachineEmptyState)) throw new AssertionError();
