@@ -46,4 +46,8 @@ public final class Door {
         System.out.println(result ? "Door unlocked" : "Nothing happened");
         return result;
     }
+
+    public IDoorState getCurrentState() {
+        return this.currentState;
+    }
 }

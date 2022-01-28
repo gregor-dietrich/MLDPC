@@ -39,4 +39,8 @@ public final class VendingMachine {
     public void setStock(int stock) {
         this.stock = stock;
     }
+
+    public AVendingMachineState getCurrentState() {
+        return this.currentState;
+    }
 }
