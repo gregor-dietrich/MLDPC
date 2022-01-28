@@ -1,10 +1,10 @@
 package main;
 
-import main.VendingMachineStates.AVendingMachineState;
+import main.VendingMachineStates.IVendingMachineState;
 import main.VendingMachineStates.MachineEmptyState;
 
 public final class VendingMachine {
-    private AVendingMachineState currentState;
+    private IVendingMachineState currentState;
     private int stock;
 
     public VendingMachine() {
@@ -44,7 +44,7 @@ public final class VendingMachine {
         this.stock = Math.max(stock, 0);
     }
 
-    public AVendingMachineState getCurrentState() {
+    public IVendingMachineState getCurrentState() {
         return this.currentState;
     }
 }

@@ -2,27 +2,27 @@ package main.VendingMachineStates;
 
 import main.Coin;
 
-public class WaitingForCoinState implements AVendingMachineState {
+public class WaitingForCoinState implements IVendingMachineState {
     @Override
-    public AVendingMachineState restock() {
+    public IVendingMachineState restock() {
         System.out.println("Nothing happened.");
         return this;
     }
 
     @Override
-    public AVendingMachineState insertCoin(final Coin coin) {
+    public IVendingMachineState insertCoin(final Coin coin) {
         System.out.println("Coin inserted.");
         return new WaitingForOrderState();
     }
 
     @Override
-    public AVendingMachineState returnCoin() {
+    public IVendingMachineState returnCoin() {
         System.out.println("Nothing happened.");
         return this;
     }
 
     @Override
-    public AVendingMachineState orderProduct() {
+    public IVendingMachineState orderProduct() {
         System.out.println("Nothing happened.");
         return this;
     }
