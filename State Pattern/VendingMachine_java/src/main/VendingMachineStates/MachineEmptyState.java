@@ -1,5 +1,6 @@
 package main.VendingMachineStates;
 
+import main.Coin;
 import main.VendingMachine;
 
 public class MachineEmptyState extends AVendingMachineState {
@@ -15,7 +16,7 @@ public class MachineEmptyState extends AVendingMachineState {
     }
 
     @Override
-    public AVendingMachineState insertCoin() {
+    public AVendingMachineState insertCoin(final Coin coin) {
         System.out.println("Nothing happened.");
         return this;
     }

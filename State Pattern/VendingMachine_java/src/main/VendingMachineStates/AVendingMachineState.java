@@ -1,5 +1,6 @@
 package main.VendingMachineStates;
 
+import main.Coin;
 import main.VendingMachine;
 
 public abstract class AVendingMachineState {
@@ -11,7 +12,7 @@ public abstract class AVendingMachineState {
 
     public abstract AVendingMachineState restock();
 
-    public abstract AVendingMachineState insertCoin();
+    public abstract AVendingMachineState insertCoin(final Coin coin);
 
     public abstract AVendingMachineState returnCoin();
 

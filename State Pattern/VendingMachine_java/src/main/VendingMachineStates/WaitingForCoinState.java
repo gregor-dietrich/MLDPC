@@ -1,5 +1,6 @@
 package main.VendingMachineStates;
 
+import main.Coin;
 import main.VendingMachine;
 
 public class WaitingForCoinState extends AVendingMachineState {
@@ -14,7 +15,7 @@ public class WaitingForCoinState extends AVendingMachineState {
     }
 
     @Override
-    public AVendingMachineState insertCoin() {
+    public AVendingMachineState insertCoin(final Coin coin) {
         System.out.println("Coin inserted.");
         return new WaitingForOrderState(this.vendingMachine);
     }

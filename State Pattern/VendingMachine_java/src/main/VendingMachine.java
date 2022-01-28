@@ -17,9 +17,9 @@ public final class VendingMachine {
         this.currentState = currentState.restock();
     }
 
-    public void insertCoin() {
+    public void insertCoin(final Coin coin) {
         System.out.println("Attempting to insert coin...");
-        this.currentState = currentState.insertCoin();
+        this.currentState = currentState.insertCoin(coin);
     }
 
     public void returnCoin() {

@@ -12,29 +12,29 @@ public class Main {
         if (!(vendingMachine.getCurrentState() instanceof MachineEmptyState)) throw new AssertionError();
         vendingMachine.orderProduct(); // Nothing happened
         vendingMachine.returnCoin(); // Nothing happened
-        vendingMachine.insertCoin(); // Nothing happened
+        vendingMachine.insertCoin(new Coin()); // Nothing happened
         vendingMachine.restock(); // Restocked machine
         // WaitingForCoinState
         if (!(vendingMachine.getCurrentState() instanceof WaitingForCoinState)) throw new AssertionError();
         vendingMachine.restock(); // Nothing happened
         vendingMachine.orderProduct(); // Nothing happened
         vendingMachine.returnCoin(); // Nothing happened
-        vendingMachine.insertCoin(); // Coin inserted
+        vendingMachine.insertCoin(new Coin()); // Coin inserted
         // WaitingForOrderState
         if (!(vendingMachine.getCurrentState() instanceof WaitingForOrderState)) throw new AssertionError();
-        vendingMachine.insertCoin(); // Nothing happened
+        vendingMachine.insertCoin(new Coin()); // Nothing happened
         vendingMachine.restock(); // Nothing happened
         vendingMachine.returnCoin(); // Coin returned
         // WaitingForCoinState
         if (!(vendingMachine.getCurrentState() instanceof WaitingForCoinState)) throw new AssertionError();
-        vendingMachine.insertCoin(); // Coin inserted
+        vendingMachine.insertCoin(new Coin()); // Coin inserted
         // WaitingForOrderState
         if (!(vendingMachine.getCurrentState() instanceof WaitingForOrderState)) throw new AssertionError();
         vendingMachine.orderProduct(); // Product ordered
         System.out.println(vendingMachine.getStock()); // 99
         vendingMachine.restock(); // Nothing happened
         while (vendingMachine.getStock() > 0) {
-            vendingMachine.insertCoin();
+            vendingMachine.insertCoin(new Coin());
             // WaitingForOrderState
             if (!(vendingMachine.getCurrentState() instanceof WaitingForOrderState)) throw new AssertionError();
             vendingMachine.orderProduct();
@@ -44,7 +44,7 @@ public class Main {
         }
         // MachineEmptyState
         if (!(vendingMachine.getCurrentState() instanceof MachineEmptyState)) throw new AssertionError();
-        vendingMachine.insertCoin(); // Nothing happened
+        vendingMachine.insertCoin(new Coin()); // Nothing happened
         vendingMachine.orderProduct(); // Nothing happened
         vendingMachine.returnCoin(); // Nothing happened
         vendingMachine.restock(); // Restocked machine
