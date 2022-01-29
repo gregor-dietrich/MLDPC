@@ -2,7 +2,7 @@ package main.VendingMachineStates;
 
 import main.Coin;
 
-public class WaitingForOrderState implements IVendingMachineState {
+public final class WaitingForOrderState implements IVendingMachineState {
     @Override
     public IVendingMachineState restock() {
         System.out.println("Nothing happened.");

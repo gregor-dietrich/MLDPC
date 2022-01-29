@@ -2,7 +2,7 @@ package main.VendingMachineStates;
 
 import main.Coin;
 
-public class MachineEmptyState implements IVendingMachineState {
+public final class MachineEmptyState implements IVendingMachineState {
     @Override
     public IVendingMachineState restock() {
         System.out.println("Restocked machine.");
