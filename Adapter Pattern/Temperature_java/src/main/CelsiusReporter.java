@@ -1,13 +1,13 @@
 package main;
 
 public class CelsiusReporter {
-    private double temperature;
+    private double temperatureInC;
 
-    public double getTemperature() {
-        return temperature;
+    public final double getTemperatureInC() {
+        return temperatureInC;
     }
 
-    public void setTemperature(final double temperature) {
-        this.temperature = temperature;
+    public final void setTemperatureInC(final double temperatureInC) {
+        this.temperatureInC = temperatureInC;
     }
 }

@@ -1,16 +1,18 @@
 package main;
 
+import java.text.DecimalFormat;
+
 public class Main {
 
     public static void main(String[] args) {
-        final var tempC = new CelsiusAdapter();
-        tempC.setTemperature(0);
-        System.out.println(tempC.getTemperatureInC());
-        System.out.println(tempC.getTemperatureInF());
+        final var df = new DecimalFormat("#.##");
+        final var tempInfo = new FahrenheitAdapter();
+        tempInfo.setTemperatureInC(0);
+        System.out.println("Temperature in °C: " + df.format(tempInfo.getTemperatureInC()));
+        System.out.println("Temperature in °F: " + df.format(tempInfo.getTemperatureInF()));
 
-        final var tempF = new FahrenheitAdapter();
-        tempF.setTemperature(85);
-        System.out.println(tempF.getTemperatureInF());
-        System.out.println(tempF.getTemperatureInC());
+        tempInfo.setTemperatureInF(85);
+        System.out.println("Temperature in °C: " + df.format(tempInfo.getTemperatureInC()));
+        System.out.println("Temperature in °F: " + df.format(tempInfo.getTemperatureInF()));
     }
 }
