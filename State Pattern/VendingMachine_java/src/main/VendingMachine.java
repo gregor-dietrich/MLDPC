@@ -2,6 +2,7 @@ package main;
 
 import main.VendingMachineStates.IVendingMachineState;
 import main.VendingMachineStates.MachineEmptyState;
+import main.VendingMachineStates.WaitingForOrderState;
 
 public final class VendingMachine {
     private IVendingMachineState currentState;
@@ -31,9 +32,10 @@ public final class VendingMachine {
 
     public void orderProduct() {
         System.out.println("Attempting to order product ...");
-        if (this.getStock() > 0)
+        if (this.getStock() > 0 && this.currentState instanceof WaitingForOrderState)
             this.setStock(this.getStock() - 1);
-        this.currentState = this.getStock() > 0 ? currentState.orderProduct() : new MachineEmptyState();
+        this.currentState = currentState.orderProduct();
+        this.currentState = this.getStock() > 0 ? this.currentState : new MachineEmptyState();
     }
 
     public int getStock() {

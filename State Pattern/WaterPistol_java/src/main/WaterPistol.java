@@ -42,13 +42,11 @@ public final class WaterPistol {
     public void shoot() {
         final int amount = (this.getAmmo() == this.ammoMax) ? 100 : 50;
         System.out.println("Attempting to shoot " + amount + "ml...");
+        this.currentState = currentState.shoot(amount);
         if (this.getAmmo() >= amount) {
             this.setAmmo(this.getAmmo() - amount);
-            this.currentState = currentState.shoot(amount);
             this.currentState = (this.getAmmo() > this.ammoMin) ? this.currentState : new WaterPistolEmptyState();
         }
-        else
-            this.currentState = currentState.shoot(amount);
     }
 
     public int getAmmo() {
