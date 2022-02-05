@@ -8,24 +8,27 @@ public final class Star implements I2DShape {
     private double innerSideLength;
     private int points;
     private Triangle triangle;
-    private Polygon pentagon;
+    private Polygon polygon;
 
     public Star(final int points, final double innerSideLength) {
-        if (points < 3 || innerSideLength <= 0) throw new IllegalArgumentException();
-        this.points = points;
-        this.innerSideLength = innerSideLength;
+        this(new Polygon(points, innerSideLength));
+    }
+
+    public Star(final Polygon polygon) {
+        this.points = polygon.getEdges();
+        this.innerSideLength = polygon.getSideLength();
         this.triangle = new Triangle(innerSideLength * 1.5, innerSideLength * 1.5, innerSideLength);
-        this.pentagon = new Polygon(points, innerSideLength);
+        this.polygon = polygon;
     }
 
     @Override
     public double getArea() {
-        return points * triangle.getArea() + pentagon.getArea() ;
+        return points * triangle.getArea() + polygon.getArea() ;
     }
 
     @Override
     public double getPerimeter() {
-        return points * triangle.getPerimeter() - pentagon.getPerimeter();
+        return points * triangle.getPerimeter() - polygon.getPerimeter();
     }
 
     public double getInnerSideLength() {
@@ -36,7 +39,7 @@ public final class Star implements I2DShape {
         if (innerSideLength <= 0) throw new IllegalArgumentException();
         this.innerSideLength = innerSideLength;
         this.triangle = new Triangle(innerSideLength * 1.5, innerSideLength * 1.5, innerSideLength);
-        this.pentagon = new Polygon(points, innerSideLength);
+        this.polygon = new Polygon(points, innerSideLength);
     }
 
     public int getPoints() {
@@ -46,7 +49,7 @@ public final class Star implements I2DShape {
     public void setPoints(final int points) {
         if (points < 3) throw new IllegalArgumentException();
         this.points = points;
-        this.pentagon = new Polygon(points, innerSideLength);
+        this.polygon = new Polygon(points, innerSideLength);
     }
 
     @Override
