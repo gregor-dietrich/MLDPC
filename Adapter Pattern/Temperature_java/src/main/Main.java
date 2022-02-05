@@ -6,13 +6,22 @@ public class Main {
 
     public static void main(String[] args) {
         final var df = new DecimalFormat("#.##");
-        final var tempInfo = new FahrenheitAdapter();
-        tempInfo.setTemperatureInC(0);
-        System.out.println("Temperature in °C: " + df.format(tempInfo.getTemperatureInC()));
-        System.out.println("Temperature in °F: " + df.format(tempInfo.getTemperatureInF()));
 
-        tempInfo.setTemperatureInF(85);
-        System.out.println("Temperature in °C: " + df.format(tempInfo.getTemperatureInC()));
-        System.out.println("Temperature in °F: " + df.format(tempInfo.getTemperatureInF()));
+        final var tempInfoF = new FahrenheitAdapter();
+        tempInfoF.setTemperatureInC(0);
+        System.out.println("Temperature in °C: " + df.format(tempInfoF.getTemperatureInC()));
+        System.out.println("Temperature in °F: " + df.format(tempInfoF.getTemperatureInF()));
+        tempInfoF.setTemperatureInF(85);
+        System.out.println("Temperature in °C: " + df.format(tempInfoF.getTemperatureInC()));
+        System.out.println("Temperature in °F: " + df.format(tempInfoF.getTemperatureInF()));
+
+        final var tempInfoK = new KelvinAdapter();
+        tempInfoK.setTemperatureInC(100);
+        System.out.println("Temperature in °C: " + df.format(tempInfoK.getTemperatureInC()));
+        System.out.println("Temperature in °K: " + df.format(tempInfoK.getTemperatureInK()));
+        tempInfoK.setTemperatureInK(0);
+        System.out.println("Temperature in °C: " + df.format(tempInfoK.getTemperatureInC()));
+        System.out.println("Temperature in °K: " + df.format(tempInfoK.getTemperatureInK()));
+
     }
 }
