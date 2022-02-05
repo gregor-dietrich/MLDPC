@@ -1,18 +1,18 @@
-# Multi Language Design Pattern Catalogue
+# Multi Language Design Catalogue
 Beispiele für Design Patterns in diversen Programmiersprachen
 
 ## Inhalte
 | Pattern | Typ | C++ | Java | Python |
 | ------ | ------ | ------ | ------ | ------ |
-| Strategy Pattern | Verhaltensmuster | ✔️ | ✔️ | ✔️ |
+| Strategy | Verhaltensmuster | ✔️ | ✔️ | ✔️ |
 | Template Method | Verhaltensmuster | ✔️ | ✔️ | ❌ |
-| Observer Pattern | Verhaltensmuster | ❌ | ✔️ | ❌ |
+| Observer | Verhaltensmuster | ❌ | ✔️ | ❌ |
 | Factory Method | Erzeugungsmuster | ✔️ | ✔️ | ❌ |
 | Abstract Factory | Erzeugungsmuster | ✔️ | ✔️ | ❌ |
-| Singleton Pattern | Erzeugungsmuster | ✔️ | ✔️ | ❌ |
-| Composite Pattern | Strukturmuster | ✔️ | ✔️ | ❌ |
-| Decorator Pattern | Strukturmuster | ❌ | ✔️ | ❌ |
-| Command Pattern | Verhaltensmuster | ❌ | ✔️ | ❌ |
-| State Pattern | Verhaltensmuster | ❌ | ✔️ | ❌ |
-| Adapter Pattern | Strukturmuster | ❌ | ❌ | ❌ |
-| Facade Pattern | Strukturmuster | ❌ | ❌ | ❌ |
+| Singleton | Erzeugungsmuster | ✔️ | ✔️ | ❌ |
+| Composite | Strukturmuster | ✔️ | ✔️ | ❌ |
+| Decorator | Strukturmuster | ❌ | ✔️ | ❌ |
+| Command | Verhaltensmuster | ❌ | ✔️ | ❌ |
+| State | Verhaltensmuster | ❌ | ✔️ | ❌ |
+| Adapter | Strukturmuster | ❌ | ✔️ | ❌ |
+| Facade | Strukturmuster | ❌ | ❌ | ❌ |
