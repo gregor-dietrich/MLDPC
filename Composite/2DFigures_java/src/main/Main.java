@@ -14,7 +14,8 @@ public class Main {
     public static void main(String[] args) {
         final var shapes = new ArrayList<I2DShape>();
         shapes.add(new Triangle(3, 4, 5));
-        shapes.add(new Triangle(1, 1, 1));
+        shapes.add(new Triangle(2, 1));
+        shapes.add(new Triangle(1));
         shapes.add(new Rectangle(2, 3));
         shapes.add(new Rectangle(4, 4));
         shapes.add(new Circle(1));

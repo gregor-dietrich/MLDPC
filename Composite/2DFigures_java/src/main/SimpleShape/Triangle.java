@@ -14,6 +14,14 @@ public final class Triangle implements I2DShape {
         this.cLength = cLength;
     }
 
+    public Triangle(final double legLength, final double baseLength) {
+        this(legLength, legLength, baseLength);
+    }
+
+    public Triangle(final double sideLength) {
+        this(sideLength, sideLength);
+    }
+
     public static boolean isValid(final double aLength, final double bLength, final double cLength) {
         if (aLength <= 0 || bLength <= 0 || cLength <= 0) return false;
         return aLength + bLength > cLength && bLength + cLength > aLength && cLength + aLength > bLength;
