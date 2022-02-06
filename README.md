@@ -15,4 +15,4 @@ Beispiele für Design Patterns in diversen Programmiersprachen
 | Command | Verhaltensmuster | ❌ | ✔️ | ❌ |
 | State | Verhaltensmuster | ❌ | ✔️ | ❌ |
 | Adapter | Strukturmuster | ❌ | ✔️ | ❌ |
-| Facade | Strukturmuster | ❌ | ❌ | ❌ |
+| Facade | Strukturmuster | ❌ | ✔️ | ❌ |
